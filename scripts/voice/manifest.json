@@ -1,0 +1,1788 @@
+[
+ {
+  "key": "w:a",
+  "file": "w-a",
+  "text": "[a](/ə/).",
+  "speed": 0.75
+ },
+ {
+  "key": "w:and",
+  "file": "w-and",
+  "text": "and.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:away",
+  "file": "w-away",
+  "text": "away.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:big",
+  "file": "w-big",
+  "text": "big.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:blue",
+  "file": "w-blue",
+  "text": "blue.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:can",
+  "file": "w-can",
+  "text": "can.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:come",
+  "file": "w-come",
+  "text": "come.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:down",
+  "file": "w-down",
+  "text": "down.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:find",
+  "file": "w-find",
+  "text": "find.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:for",
+  "file": "w-for",
+  "text": "for.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:funny",
+  "file": "w-funny",
+  "text": "funny.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:go",
+  "file": "w-go",
+  "text": "go.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:help",
+  "file": "w-help",
+  "text": "help.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:here",
+  "file": "w-here",
+  "text": "here.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:i",
+  "file": "w-i",
+  "text": "I.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:in",
+  "file": "w-in",
+  "text": "in.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:is",
+  "file": "w-is",
+  "text": "is.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:it",
+  "file": "w-it",
+  "text": "it.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:jump",
+  "file": "w-jump",
+  "text": "jump.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:little",
+  "file": "w-little",
+  "text": "little.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:look",
+  "file": "w-look",
+  "text": "look.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:make",
+  "file": "w-make",
+  "text": "make.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:me",
+  "file": "w-me",
+  "text": "me.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:my",
+  "file": "w-my",
+  "text": "my.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:not",
+  "file": "w-not",
+  "text": "not.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:one",
+  "file": "w-one",
+  "text": "one.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:play",
+  "file": "w-play",
+  "text": "play.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:red",
+  "file": "w-red",
+  "text": "red.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:run",
+  "file": "w-run",
+  "text": "run.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:said",
+  "file": "w-said",
+  "text": "said.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:see",
+  "file": "w-see",
+  "text": "see.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:the",
+  "file": "w-the",
+  "text": "the.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:three",
+  "file": "w-three",
+  "text": "three.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:to",
+  "file": "w-to",
+  "text": "to.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:two",
+  "file": "w-two",
+  "text": "two.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:up",
+  "file": "w-up",
+  "text": "up.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:we",
+  "file": "w-we",
+  "text": "we.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:where",
+  "file": "w-where",
+  "text": "where.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:yellow",
+  "file": "w-yellow",
+  "text": "yellow.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:you",
+  "file": "w-you",
+  "text": "you.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:all",
+  "file": "w-all",
+  "text": "all.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:am",
+  "file": "w-am",
+  "text": "am.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:are",
+  "file": "w-are",
+  "text": "are.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:at",
+  "file": "w-at",
+  "text": "at.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:ate",
+  "file": "w-ate",
+  "text": "ate.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:be",
+  "file": "w-be",
+  "text": "be.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:black",
+  "file": "w-black",
+  "text": "black.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:brown",
+  "file": "w-brown",
+  "text": "brown.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:but",
+  "file": "w-but",
+  "text": "but.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:came",
+  "file": "w-came",
+  "text": "came.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:did",
+  "file": "w-did",
+  "text": "did.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:do",
+  "file": "w-do",
+  "text": "do.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:eat",
+  "file": "w-eat",
+  "text": "eat.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:four",
+  "file": "w-four",
+  "text": "four.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:get",
+  "file": "w-get",
+  "text": "get.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:good",
+  "file": "w-good",
+  "text": "good.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:have",
+  "file": "w-have",
+  "text": "have.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:he",
+  "file": "w-he",
+  "text": "he.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:into",
+  "file": "w-into",
+  "text": "into.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:like",
+  "file": "w-like",
+  "text": "like.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:must",
+  "file": "w-must",
+  "text": "must.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:new",
+  "file": "w-new",
+  "text": "new.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:no",
+  "file": "w-no",
+  "text": "no.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:now",
+  "file": "w-now",
+  "text": "now.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:on",
+  "file": "w-on",
+  "text": "on.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:our",
+  "file": "w-our",
+  "text": "our.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:out",
+  "file": "w-out",
+  "text": "out.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:please",
+  "file": "w-please",
+  "text": "please.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:pretty",
+  "file": "w-pretty",
+  "text": "pretty.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:ran",
+  "file": "w-ran",
+  "text": "ran.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:ride",
+  "file": "w-ride",
+  "text": "ride.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:saw",
+  "file": "w-saw",
+  "text": "saw.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:say",
+  "file": "w-say",
+  "text": "say.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:she",
+  "file": "w-she",
+  "text": "she.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:so",
+  "file": "w-so",
+  "text": "so.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:soon",
+  "file": "w-soon",
+  "text": "soon.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:that",
+  "file": "w-that",
+  "text": "that.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:there",
+  "file": "w-there",
+  "text": "there.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:they",
+  "file": "w-they",
+  "text": "they.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:this",
+  "file": "w-this",
+  "text": "this.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:too",
+  "file": "w-too",
+  "text": "too.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:under",
+  "file": "w-under",
+  "text": "under.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:want",
+  "file": "w-want",
+  "text": "want.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:was",
+  "file": "w-was",
+  "text": "was.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:well",
+  "file": "w-well",
+  "text": "well.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:went",
+  "file": "w-went",
+  "text": "went.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:what",
+  "file": "w-what",
+  "text": "what.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:white",
+  "file": "w-white",
+  "text": "white.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:who",
+  "file": "w-who",
+  "text": "who.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:will",
+  "file": "w-will",
+  "text": "will.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:with",
+  "file": "w-with",
+  "text": "with.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:yes",
+  "file": "w-yes",
+  "text": "yes.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:after",
+  "file": "w-after",
+  "text": "after.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:again",
+  "file": "w-again",
+  "text": "again.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:an",
+  "file": "w-an",
+  "text": "an.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:any",
+  "file": "w-any",
+  "text": "any.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:as",
+  "file": "w-as",
+  "text": "as.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:ask",
+  "file": "w-ask",
+  "text": "ask.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:by",
+  "file": "w-by",
+  "text": "by.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:could",
+  "file": "w-could",
+  "text": "could.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:every",
+  "file": "w-every",
+  "text": "every.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:fly",
+  "file": "w-fly",
+  "text": "fly.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:from",
+  "file": "w-from",
+  "text": "from.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:give",
+  "file": "w-give",
+  "text": "give.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:going",
+  "file": "w-going",
+  "text": "going.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:had",
+  "file": "w-had",
+  "text": "had.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:has",
+  "file": "w-has",
+  "text": "has.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:her",
+  "file": "w-her",
+  "text": "her.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:him",
+  "file": "w-him",
+  "text": "him.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:his",
+  "file": "w-his",
+  "text": "his.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:how",
+  "file": "w-how",
+  "text": "how.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:just",
+  "file": "w-just",
+  "text": "just.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:know",
+  "file": "w-know",
+  "text": "know.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:let",
+  "file": "w-let",
+  "text": "let.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:live",
+  "file": "w-live",
+  "text": "[live](/lˈɪv/).",
+  "speed": 0.75
+ },
+ {
+  "key": "w:may",
+  "file": "w-may",
+  "text": "may.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:of",
+  "file": "w-of",
+  "text": "of.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:old",
+  "file": "w-old",
+  "text": "old.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:once",
+  "file": "w-once",
+  "text": "once.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:open",
+  "file": "w-open",
+  "text": "open.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:over",
+  "file": "w-over",
+  "text": "over.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:put",
+  "file": "w-put",
+  "text": "put.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:round",
+  "file": "w-round",
+  "text": "round.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:some",
+  "file": "w-some",
+  "text": "some.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:stop",
+  "file": "w-stop",
+  "text": "stop.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:take",
+  "file": "w-take",
+  "text": "take.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:thank",
+  "file": "w-thank",
+  "text": "thank.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:them",
+  "file": "w-them",
+  "text": "them.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:then",
+  "file": "w-then",
+  "text": "then.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:think",
+  "file": "w-think",
+  "text": "think.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:walk",
+  "file": "w-walk",
+  "text": "walk.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:were",
+  "file": "w-were",
+  "text": "were.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:when",
+  "file": "w-when",
+  "text": "when.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:always",
+  "file": "w-always",
+  "text": "always.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:around",
+  "file": "w-around",
+  "text": "around.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:because",
+  "file": "w-because",
+  "text": "because.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:been",
+  "file": "w-been",
+  "text": "been.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:before",
+  "file": "w-before",
+  "text": "before.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:best",
+  "file": "w-best",
+  "text": "best.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:both",
+  "file": "w-both",
+  "text": "both.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:buy",
+  "file": "w-buy",
+  "text": "buy.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:call",
+  "file": "w-call",
+  "text": "call.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:cold",
+  "file": "w-cold",
+  "text": "cold.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:does",
+  "file": "w-does",
+  "text": "does.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:don't",
+  "file": "w-dont",
+  "text": "don't.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:fast",
+  "file": "w-fast",
+  "text": "fast.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:first",
+  "file": "w-first",
+  "text": "first.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:five",
+  "file": "w-five",
+  "text": "five.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:found",
+  "file": "w-found",
+  "text": "found.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:gave",
+  "file": "w-gave",
+  "text": "gave.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:goes",
+  "file": "w-goes",
+  "text": "goes.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:green",
+  "file": "w-green",
+  "text": "green.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:its",
+  "file": "w-its",
+  "text": "its.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:made",
+  "file": "w-made",
+  "text": "made.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:many",
+  "file": "w-many",
+  "text": "many.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:off",
+  "file": "w-off",
+  "text": "off.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:or",
+  "file": "w-or",
+  "text": "or.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:pull",
+  "file": "w-pull",
+  "text": "pull.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:read",
+  "file": "w-read",
+  "text": "[read](/ɹˈid/).",
+  "speed": 0.75
+ },
+ {
+  "key": "w:right",
+  "file": "w-right",
+  "text": "right.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:sing",
+  "file": "w-sing",
+  "text": "sing.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:sit",
+  "file": "w-sit",
+  "text": "sit.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:sleep",
+  "file": "w-sleep",
+  "text": "sleep.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:tell",
+  "file": "w-tell",
+  "text": "tell.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:their",
+  "file": "w-their",
+  "text": "their.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:these",
+  "file": "w-these",
+  "text": "these.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:those",
+  "file": "w-those",
+  "text": "those.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:upon",
+  "file": "w-upon",
+  "text": "upon.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:us",
+  "file": "w-us",
+  "text": "us.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:use",
+  "file": "w-use",
+  "text": "use.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:very",
+  "file": "w-very",
+  "text": "very.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:wash",
+  "file": "w-wash",
+  "text": "wash.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:which",
+  "file": "w-which",
+  "text": "which.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:why",
+  "file": "w-why",
+  "text": "why.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:wish",
+  "file": "w-wish",
+  "text": "wish.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:work",
+  "file": "w-work",
+  "text": "work.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:would",
+  "file": "w-would",
+  "text": "would.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:write",
+  "file": "w-write",
+  "text": "write.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:your",
+  "file": "w-your",
+  "text": "your.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:about",
+  "file": "w-about",
+  "text": "about.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:better",
+  "file": "w-better",
+  "text": "better.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:bring",
+  "file": "w-bring",
+  "text": "bring.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:carry",
+  "file": "w-carry",
+  "text": "carry.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:clean",
+  "file": "w-clean",
+  "text": "clean.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:cut",
+  "file": "w-cut",
+  "text": "cut.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:done",
+  "file": "w-done",
+  "text": "done.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:draw",
+  "file": "w-draw",
+  "text": "draw.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:drink",
+  "file": "w-drink",
+  "text": "drink.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:eight",
+  "file": "w-eight",
+  "text": "eight.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:fall",
+  "file": "w-fall",
+  "text": "fall.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:far",
+  "file": "w-far",
+  "text": "far.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:full",
+  "file": "w-full",
+  "text": "full.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:got",
+  "file": "w-got",
+  "text": "got.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:grow",
+  "file": "w-grow",
+  "text": "grow.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:hold",
+  "file": "w-hold",
+  "text": "hold.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:hot",
+  "file": "w-hot",
+  "text": "hot.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:hurt",
+  "file": "w-hurt",
+  "text": "hurt.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:if",
+  "file": "w-if",
+  "text": "if.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:keep",
+  "file": "w-keep",
+  "text": "keep.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:kind",
+  "file": "w-kind",
+  "text": "kind.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:laugh",
+  "file": "w-laugh",
+  "text": "laugh.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:light",
+  "file": "w-light",
+  "text": "light.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:long",
+  "file": "w-long",
+  "text": "long.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:much",
+  "file": "w-much",
+  "text": "much.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:myself",
+  "file": "w-myself",
+  "text": "myself.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:never",
+  "file": "w-never",
+  "text": "never.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:only",
+  "file": "w-only",
+  "text": "only.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:own",
+  "file": "w-own",
+  "text": "own.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:pick",
+  "file": "w-pick",
+  "text": "pick.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:seven",
+  "file": "w-seven",
+  "text": "seven.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:shall",
+  "file": "w-shall",
+  "text": "shall.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:show",
+  "file": "w-show",
+  "text": "show.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:six",
+  "file": "w-six",
+  "text": "six.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:small",
+  "file": "w-small",
+  "text": "small.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:start",
+  "file": "w-start",
+  "text": "start.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:ten",
+  "file": "w-ten",
+  "text": "ten.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:today",
+  "file": "w-today",
+  "text": "today.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:together",
+  "file": "w-together",
+  "text": "together.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:try",
+  "file": "w-try",
+  "text": "try.",
+  "speed": 0.75
+ },
+ {
+  "key": "w:warm",
+  "file": "w-warm",
+  "text": "warm.",
+  "speed": 0.75
+ },
+ {
+  "key": "p:I see a cat.",
+  "file": "s-i-see-a-cat",
+  "text": "I see a cat."
+ },
+ {
+  "key": "p:I like to play.",
+  "file": "s-i-like-to-play",
+  "text": "I like to play."
+ },
+ {
+  "key": "p:We go to school.",
+  "file": "s-we-go-to-school",
+  "text": "We go to school."
+ },
+ {
+  "key": "p:I have two hands.",
+  "file": "s-i-have-two-hands",
+  "text": "I have two hands."
+ },
+ {
+  "key": "p:I want to come too.",
+  "file": "s-i-want-to-come-too",
+  "text": "I want to come too."
+ },
+ {
+  "key": "p:The ball is over there.",
+  "file": "s-the-ball-is-over-there",
+  "text": "The ball is over there."
+ },
+ {
+  "key": "p:The kids ride their bikes.",
+  "file": "s-the-kids-ride-their-bikes",
+  "text": "The kids ride their bikes."
+ },
+ {
+  "key": "p:This gift is for you.",
+  "file": "s-this-gift-is-for-you",
+  "text": "This gift is for you."
+ },
+ {
+  "key": "p:A dog has four legs.",
+  "file": "s-a-dog-has-four-legs",
+  "text": "A dog has four legs."
+ },
+ {
+  "key": "p:Sit by me.",
+  "file": "s-sit-by-me",
+  "text": "Sit by me."
+ },
+ {
+  "key": "p:We buy food at the store.",
+  "file": "s-we-buy-food-at-the-store",
+  "text": "We buy food at the store."
+ },
+ {
+  "key": "p:No, thank you.",
+  "file": "s-no-thank-you",
+  "text": "No, thank you."
+ },
+ {
+  "key": "p:I know my name.",
+  "file": "s-i-know-my-name",
+  "text": "I know my name."
+ },
+ {
+  "key": "p:Turn to the right.",
+  "file": "s-turn-to-the-right",
+  "text": "Turn to the right."
+ },
+ {
+  "key": "p:I can write my name.",
+  "file": "s-i-can-write-my-name",
+  "text": "I can write my name."
+ },
+ {
+  "key": "p:I have one nose.",
+  "file": "s-i-have-one-nose",
+  "text": "I have one nose."
+ },
+ {
+  "key": "p:I ate my lunch.",
+  "file": "s-i-ate-my-lunch",
+  "text": "I ate my lunch."
+ },
+ {
+  "key": "p:A spider has eight legs.",
+  "file": "s-a-spider-has-eight-legs",
+  "text": "A spider has eight legs."
+ },
+ {
+  "key": "p:I have new shoes.",
+  "file": "s-i-have-new-shoes",
+  "text": "I have new shoes."
+ },
+ {
+  "key": "p:I want to be a cat.",
+  "file": "s-i-want-to-be-a-cat",
+  "text": "I want to be a cat."
+ },
+ {
+  "key": "p:I see a bird.",
+  "file": "s-i-see-a-bird",
+  "text": "I see a bird."
+ },
+ {
+  "key": "p:The dog wags its tail.",
+  "file": "s-the-dog-wags-its-tail",
+  "text": "The dog wags its tail."
+ },
+ {
+  "key": "p:This is our house.",
+  "file": "s-this-is-our-house",
+  "text": "This is our house."
+ },
+ {
+  "key": "p:Which one do you want?",
+  "file": "s-which-one-do-you-want",
+  "text": "Which one do you want?"
+ },
+ {
+  "key": "p:Would you like to play?",
+  "file": "s-would-you-like-to-play",
+  "text": "Would you like to play?"
+ },
+ {
+  "key": "p:I am so happy.",
+  "file": "s-i-am-so-happy",
+  "text": "I am so happy."
+ },
+ {
+  "key": "p:The apple is red.",
+  "file": "s-the-apple-is-red",
+  "text": "The apple is red."
+ },
+ {
+  "key": "p:I like to read books.",
+  "file": "s-i-like-to-read-books",
+  "text": "I like to read books."
+ },
+ {
+  "key": "p:I live in a house.",
+  "file": "s-i-live-in-a-house",
+  "text": "I live in a house."
+ },
+ {
+  "key": "p:The sky is blue.",
+  "file": "s-the-sky-is-blue",
+  "text": "The sky is blue."
+ },
+ {
+  "key": "p:I made a cake.",
+  "file": "s-i-made-a-cake",
+  "text": "I made a cake."
+ },
+ {
+  "key": "p:Come here, please.",
+  "file": "s-come-here-please",
+  "text": "Come here, please."
+ },
+ {
+  "key": "p:Where is my hat?",
+  "file": "s-where-is-my-hat",
+  "text": "Where is my hat?"
+ },
+ {
+  "key": "p:Can I have some milk?",
+  "file": "s-can-i-have-some-milk",
+  "text": "Can I have some milk?"
+ },
+ {
+  "key": "p:I am not sad.",
+  "file": "s-i-am-not-sad",
+  "text": "I am not sad."
+ },
+ {
+  "key": "p:I gave him a ball.",
+  "file": "s-i-gave-him-a-ball",
+  "text": "I gave him a ball."
+ },
+ {
+  "key": "p:I wish I could fly.",
+  "file": "s-i-wish-i-could-fly",
+  "text": "I wish I could fly."
+ },
+ {
+  "key": "p:Please close the door.",
+  "file": "s-please-close-the-door",
+  "text": "Please close the door."
+ },
+ {
+  "key": "p:The wind is cold.",
+  "file": "s-the-wind-is-cold",
+  "text": "The wind is cold."
+ },
+ {
+  "key": "p:Find the word",
+  "file": "p-find-the-word",
+  "text": "Find the word"
+ },
+ {
+  "key": "p:Find",
+  "file": "p-find",
+  "text": "Find"
+ },
+ {
+  "key": "p:That says",
+  "file": "p-that-says",
+  "text": "That says"
+ },
+ {
+  "key": "p:This word is",
+  "file": "p-this-word-is",
+  "text": "This word is"
+ },
+ {
+  "key": "p:Spell",
+  "file": "p-spell",
+  "text": "Spell"
+ },
+ {
+  "key": "p:is spelled",
+  "file": "p-is-spelled",
+  "text": "is spelled"
+ },
+ {
+  "key": "p:apostrophe",
+  "file": "p-apostrophe",
+  "text": "apostrophe"
+ },
+ {
+  "key": "p:Great job!",
+  "file": "p-great-job",
+  "text": "Great job!"
+ },
+ {
+  "key": "p:You got a new sticker!",
+  "file": "p-you-got-a-new-sticker",
+  "text": "You got a new sticker!"
+ },
+ {
+  "key": "p:Hi! Ready to learn?",
+  "file": "p-hi-ready-to-learn",
+  "text": "Hi! Ready to learn?"
+ },
+ {
+  "key": "p:Flashcards",
+  "file": "p-flashcards",
+  "text": "Flashcards"
+ },
+ {
+  "key": "p:Hear and Find",
+  "file": "p-hear-and-find",
+  "text": "Hear and Find"
+ },
+ {
+  "key": "p:Spell It",
+  "file": "p-spell-it",
+  "text": "Spell It"
+ },
+ {
+  "key": "p:I can read!",
+  "file": "p-i-can-read",
+  "text": "I can read!"
+ },
+ {
+  "key": "p:You got it!",
+  "file": "p-you-got-it",
+  "text": "You got it!"
+ },
+ {
+  "key": "p:Awesome!",
+  "file": "p-awesome",
+  "text": "Awesome!"
+ },
+ {
+  "key": "p:Way to go!",
+  "file": "p-way-to-go",
+  "text": "Way to go!"
+ },
+ {
+  "key": "p:Super!",
+  "file": "p-super",
+  "text": "Super!"
+ },
+ {
+  "key": "p:Nice work!",
+  "file": "p-nice-work",
+  "text": "Nice work!"
+ },
+ {
+  "key": "p:Yes!",
+  "file": "p-yes",
+  "text": "Yes!"
+ },
+ {
+  "key": "p:Try again!",
+  "file": "p-try-again",
+  "text": "Try again!"
+ },
+ {
+  "key": "p:Almost! Try again.",
+  "file": "p-almost-try-again",
+  "text": "Almost! Try again."
+ },
+ {
+  "key": "p:Keep going!",
+  "file": "p-keep-going",
+  "text": "Keep going!"
+ },
+ {
+  "key": "l:a",
+  "file": "l-a",
+  "text": "ay.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:b",
+  "file": "l-b",
+  "text": "bee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:c",
+  "file": "l-c",
+  "text": "see.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:d",
+  "file": "l-d",
+  "text": "dee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:e",
+  "file": "l-e",
+  "text": "ee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:f",
+  "file": "l-f",
+  "text": "eff.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:g",
+  "file": "l-g",
+  "text": "jee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:h",
+  "file": "l-h",
+  "text": "aitch.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:i",
+  "file": "l-i",
+  "text": "eye.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:j",
+  "file": "l-j",
+  "text": "jay.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:k",
+  "file": "l-k",
+  "text": "kay.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:l",
+  "file": "l-l",
+  "text": "ell.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:m",
+  "file": "l-m",
+  "text": "em.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:n",
+  "file": "l-n",
+  "text": "en.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:o",
+  "file": "l-o",
+  "text": "oh.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:p",
+  "file": "l-p",
+  "text": "pee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:q",
+  "file": "l-q",
+  "text": "cue.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:r",
+  "file": "l-r",
+  "text": "are.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:s",
+  "file": "l-s",
+  "text": "ess.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:t",
+  "file": "l-t",
+  "text": "tee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:u",
+  "file": "l-u",
+  "text": "you.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:v",
+  "file": "l-v",
+  "text": "vee.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:w",
+  "file": "l-w",
+  "text": "double you.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:x",
+  "file": "l-x",
+  "text": "ex.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:y",
+  "file": "l-y",
+  "text": "why.",
+  "speed": 0.75
+ },
+ {
+  "key": "l:z",
+  "file": "l-z",
+  "text": "zee.",
+  "speed": 0.75
+ }
+]

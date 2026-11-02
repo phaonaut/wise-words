@@ -4,15 +4,16 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { MissingKid } from '@/components/game';
 import { BigButton, goBack, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
-import { statusOf } from '@/lib/srs';
+import { MASTERED } from '@/lib/srs';
 import { buzz, say } from '@/lib/speech';
 import { progressFor, rewardsFor, useKid, useStore } from '@/lib/store';
+import type { WordEntry, WordProgress } from '@/lib/types';
 import { wordKey, wordPool } from '@/lib/words';
 
 const GAMES = [
-  { route: 'flashcards', name: 'Flashcards', emoji: '🃏', color: colors.flashcards, hint: 'Read the word to a grown-up' },
-  { route: 'find', name: 'Hear & Find', emoji: '👂', color: colors.find, hint: 'Listen, then tap the word' },
-  { route: 'spell', name: 'Spell It', emoji: '✏️', color: colors.spell, hint: 'Listen, then spell the word' },
+  { route: 'flashcards', name: 'Flashcards', spoken: 'Flashcards', emoji: '🃏', color: colors.flashcards, hint: 'Read the word to a grown-up' },
+  { route: 'find', name: 'Hear & Find', spoken: 'Hear and Find', emoji: '👂', color: colors.find, hint: 'Listen, then tap the word' },
+  { route: 'spell', name: 'Spell It', spoken: 'Spell It', emoji: '✏️', color: colors.spell, hint: 'Listen, then spell the word' },
 ] as const;
 
 export default function KidHome() {
@@ -23,8 +24,6 @@ export default function KidHome() {
 
   const pool = wordPool(data, kid);
   const progress = progressFor(data, kid.id);
-  const canRead = pool.filter((w) => statusOf(progress.read[wordKey(w.word)]) === 'mastered').length;
-  const canSpell = pool.filter((w) => statusOf(progress.spell[wordKey(w.word)]) === 'mastered').length;
   const rewards = rewardsFor(data, kid.id);
 
   return (
@@ -38,8 +37,8 @@ export default function KidHome() {
         </Txt>
       }>
       <View style={styles.meters}>
-        <Meter label="Words I can read" value={canRead} total={pool.length} color={colors.flashcards} />
-        <Meter label="Words I can spell" value={canSpell} total={pool.length} color={colors.spell} />
+        <Meter label="Words I can read" stats={meterStats(pool, progress.read)} color={colors.flashcards} />
+        <Meter label="Words I can spell" stats={meterStats(pool, progress.spell)} color={colors.spell} />
       </View>
 
       <View style={styles.games}>
@@ -50,7 +49,7 @@ export default function KidHome() {
             accessibilityLabel={g.name}
             onPress={() => {
               buzz('tap');
-              say(g.name);
+              say(g.spoken);
               router.push(`/kid/${kid.id}/${g.route}` as Href);
             }}
             style={({ pressed }) => [
@@ -82,15 +81,41 @@ export default function KidHome() {
   );
 }
 
-function Meter({ label, value, total, color }: { label: string; value: number; total: number; color: string }) {
-  const pct = total ? Math.round((value / total) * 100) : 0;
+type MeterStats = { total: number; learned: number; onTheWay: number; partial: number };
+
+// A word is learned after 3 good days, so the bar also fills a little for each step
+// along the way. Otherwise a first round would never move it.
+function meterStats(pool: WordEntry[], progress: Record<string, WordProgress>): MeterStats {
+  let learned = 0;
+  let onTheWay = 0;
+  let partial = 0;
+  for (const w of pool) {
+    const p = progress[wordKey(w.word)];
+    if (!p) continue;
+    if (p.box >= MASTERED) learned++;
+    else if (p.box > 0) {
+      onTheWay++;
+      partial += p.box / MASTERED;
+    }
+  }
+  return { total: pool.length, learned, onTheWay, partial };
+}
+
+function Meter({ label, stats, color }: { label: string; stats: MeterStats; color: string }) {
+  const pct = (n: number) => (stats.total ? (n / stats.total) * 100 : 0);
   return (
     <View style={styles.meter}>
       <Txt bold size={18}>
-        {label}: {value} of {total}
+        {label}: {stats.learned} of {stats.total}
+        {stats.onTheWay > 0 && (
+          <Txt size={16} color={colors.muted}>
+            {'  '}⭐ {stats.onTheWay} on the way
+          </Txt>
+        )}
       </Txt>
       <View style={styles.track}>
-        <View style={[styles.fill, { width: `${pct}%`, backgroundColor: color }]} />
+        <View style={{ width: `${pct(stats.learned)}%`, backgroundColor: color }} />
+        <View style={{ width: `${pct(stats.partial)}%`, backgroundColor: color, opacity: 0.4 }} />
       </View>
     </View>
   );
@@ -99,8 +124,13 @@ function Meter({ label, value, total, color }: { label: string; value: number; t
 const styles = StyleSheet.create({
   meters: { gap: 12, marginTop: 4, marginBottom: 20 },
   meter: { gap: 4 },
-  track: { height: 16, borderRadius: 8, backgroundColor: colors.line, overflow: 'hidden' },
-  fill: { height: '100%', borderRadius: 8 },
+  track: {
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: colors.line,
+    overflow: 'hidden',
+    flexDirection: 'row',
+  },
   games: { flexDirection: 'row', flexWrap: 'wrap', gap: 16, justifyContent: 'center' },
   game: {
     width: 260,

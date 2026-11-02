@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 
+import { Logo } from '@/components/owl';
 import { BigButton, Card, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { buzz, say } from '@/lib/speech';
@@ -23,19 +24,19 @@ export default function WhoIsPlaying() {
         />
       }>
       <View style={styles.titleBlock}>
-        <Txt bold size={46} center>
-          Wise Words
-        </Txt>
+        <Logo />
         {data.kids.length > 0 && (
           <Txt size={26} center color={colors.muted}>
-            Who&apos;s playing?
+            Whoo&apos;s learning?
           </Txt>
         )}
       </View>
 
       {data.kids.length === 0 ? (
         <Card style={{ alignItems: 'center', gap: 14 }}>
-          <Txt size={56}>👋</Txt>
+          <Txt size={18} color={colors.muted} center>
+            Hi, I&apos;m Ollie the owl!
+          </Txt>
           <Txt bold size={24} center>
             Welcome!
           </Txt>
@@ -53,7 +54,7 @@ export default function WhoIsPlaying() {
               accessibilityLabel={kid.name}
               onPress={() => {
                 buzz('tap');
-                say(`Hi ${kid.name}!`);
+                say('Hi! Ready to learn?');
                 router.push({ pathname: '/kid/[kidId]', params: { kidId: kid.id } });
               }}
               style={({ pressed }) => [

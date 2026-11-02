@@ -47,6 +47,26 @@ npx expo export --platform web
 1. Host the `dist` folder (for example on Netlify or GitHub Pages).
 2. Approve the address under the child profile's web settings.
 
+## Voice
+
+The built-in words, sentences, letter names and phrases are pre-recorded MP3s in `assets/audio/female` and
+`assets/audio/male`. Grown-ups pick the voice in the app. They were made with
+[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), a free, open-source voice (Apache-2.0): `af_heart` for
+the female voice and `am_michael` for the male voice. Words from your own lists use the device's voice.
+
+To re-record after adding phrases or sentences (needs Python 3.10–3.12):
+
+```bash
+py -3.12 -m venv .kokoro-env
+.kokoro-env\Scripts\python -m pip install "kokoro>=0.9.4" soundfile
+npm run voice:list
+.kokoro-env\Scripts\python scripts/voice/generate.py --set female
+.kokoro-env\Scripts\python scripts/voice/generate.py --set male
+```
+
+Existing clips are skipped, so this only records what's new. Add `--force` to redo everything, for example with a different
+`--voice`.
+
 ## Code map
 
 - `src/app/`: screens (Expo Router). Kid games live in `kid/[kidId]/`, and the grown-ups area in `grownups/`.

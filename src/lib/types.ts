@@ -39,7 +39,11 @@ export type KidProgress = Record<Skill, Record<string, WordProgress>>;
 
 export type Rewards = { stars: number; stickers: string[] };
 
-export type Settings = { speechRate: number };
+export type Settings = {
+  speechRate: number;
+  /** Missing in data saved before the voice choice existed; treated as 'female'. */
+  voice?: 'female' | 'male';
+};
 
 export type AppData = {
   version: 1;

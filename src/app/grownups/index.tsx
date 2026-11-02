@@ -6,8 +6,8 @@ import { BigButton, Card, Choice, Screen, SectionTitle, Txt } from '@/components
 import { colors } from '@/constants/theme';
 import { BUILT_IN_LISTS } from '@/data/dolch';
 import { statusOf } from '@/lib/srs';
-import { say } from '@/lib/speech';
-import { progressFor, setSpeechRate, useStore } from '@/lib/store';
+import { asWord, say, setRate as setSpeechSpeed, setVoice as setSpeechVoice } from '@/lib/speech';
+import { progressFor, setSpeechRate, setVoice, useStore } from '@/lib/store';
 import type { WordList } from '@/lib/types';
 import { allLists, wordKey, wordPool } from '@/lib/words';
 
@@ -83,22 +83,39 @@ export default function GrownupsHome() {
         ))}
       </View>
 
-      <SectionTitle>Voice speed</SectionTitle>
+      <SectionTitle>Voice</SectionTitle>
       <Card style={{ gap: 12 }}>
+        <Choice
+          value={data.settings.voice ?? 'female'}
+          onChange={(voice) => {
+            update(setVoice(voice));
+            setSpeechVoice(voice);
+            say(asWord('look'), 'I can read!');
+          }}
+          options={[
+            { value: 'female', label: '👩 Female' },
+            { value: 'male', label: '👨 Male' },
+          ]}
+        />
+        <Txt bold size={16}>
+          Speed
+        </Txt>
         <Choice
           value={data.settings.speechRate}
           onChange={(rate) => {
             update(setSpeechRate(rate));
-            setTimeout(() => say('look', 'I can read!'), 50);
+            setSpeechSpeed(rate);
+            say(asWord('look'), 'I can read!');
           }}
           options={[
             { value: 0.65, label: 'Slow' },
             { value: 0.85, label: 'Medium' },
-            { value: 1, label: 'Normal' },
+            { value: 1, label: 'Fast' },
           ]}
         />
         <Txt size={14} color={colors.muted}>
-          The voice comes from the device. On iPhone and iPad, turn off silent mode to hear it.
+          The built-in sight words and phrases are recorded. Words from your own lists are read by
+          the device&apos;s voice, which may sound different.
         </Txt>
       </Card>
 

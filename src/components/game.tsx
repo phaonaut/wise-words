@@ -2,6 +2,7 @@ import { router } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Platform, StyleSheet, View } from 'react-native';
 
+import { Owl } from '@/components/owl';
 import { BigButton, Card, goBack, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { pickRound } from '@/lib/srs';
@@ -103,7 +104,7 @@ export function RoundDone({
   const totalStars = rewardsFor(data, kid.id).stars;
 
   useEffect(() => {
-    say(`Great job, ${kid.name}! You got a new sticker!`);
+    say('Great job!', 'You got a new sticker!');
     Animated.spring(scale, {
       toValue: 1,
       friction: 4,
@@ -119,18 +120,21 @@ export function RoundDone({
       <Txt size={26} center>
         ⭐ {stars} of {total} on the first try
       </Txt>
-      {sticker && (
-        <Card style={{ alignItems: 'center', gap: 4 }}>
-          <Txt size={20} color={colors.muted}>
-            New sticker!
-          </Txt>
-          <Animated.View style={{ transform: [{ scale }] }}>
-            <Txt size={110} style={{ lineHeight: 140 }}>
-              {sticker}
+      <View style={styles.celebrate}>
+        <Owl size={140} mood="cheer" bounce />
+        {sticker && (
+          <Card style={{ alignItems: 'center', gap: 4 }}>
+            <Txt size={20} color={colors.muted}>
+              New sticker!
             </Txt>
-          </Animated.View>
-        </Card>
-      )}
+            <Animated.View style={{ transform: [{ scale }] }}>
+              <Txt size={110} style={{ lineHeight: 140 }}>
+                {sticker}
+              </Txt>
+            </Animated.View>
+          </Card>
+        )}
+      </View>
       <Txt size={18} color={colors.muted} center>
         You have {totalStars} stars in all!
       </Txt>
@@ -145,7 +149,7 @@ export function RoundDone({
 export function NoWords({ kid }: { kid: Kid }) {
   return (
     <Screen back={() => goBack()} contentStyle={styles.doneWrap}>
-      <Txt size={64}>📚</Txt>
+      <Owl size={140} />
       <Txt bold size={26} center>
         No words yet, {kid.name}!
       </Txt>
@@ -171,5 +175,6 @@ const styles = StyleSheet.create({
   dots: { flexDirection: 'row', gap: 6, justifyContent: 'center', flexWrap: 'wrap' },
   dot: { width: 14, height: 14, borderRadius: 7 },
   doneWrap: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 18 },
+  celebrate: { flexDirection: 'row', alignItems: 'center', gap: 16, flexWrap: 'wrap', justifyContent: 'center' },
   doneButtons: { flexDirection: 'row', gap: 14, flexWrap: 'wrap', justifyContent: 'center' },
 });

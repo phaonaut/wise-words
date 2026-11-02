@@ -15,6 +15,7 @@ export const colors = {
   fresh: '#ECE7EF',
   star: '#E08E00',
   grownups: '#5C6BC0',
+  owl: '#8A5636',
 };
 
 export const fonts = {

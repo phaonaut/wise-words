@@ -41,3 +41,6 @@ example
 # generated native folders
 /ios
 /android
+
+# Python env for scripts/voice/generate.py
+.kokoro-env/

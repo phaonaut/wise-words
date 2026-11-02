@@ -6,7 +6,7 @@ import { MissingKid, NoWords, RoundDone, RoundProgress, useRound } from '@/compo
 import { BigButton, Card, goBack, Screen, SpeakerButton, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { PRAISE, pickOne } from '@/data/fun';
-import { buzz, say } from '@/lib/speech';
+import { asWord, buzz, say } from '@/lib/speech';
 import { useKid } from '@/lib/store';
 import type { WordEntry } from '@/lib/types';
 import { sentenceFor } from '@/lib/words';
@@ -56,7 +56,7 @@ function FlashCard({ word, onAnswer }: { word: WordEntry; onAnswer: (correct: bo
 
       {learning ? (
         <View style={styles.row}>
-          <SpeakerButton onPress={() => say(word.word, sentenceFor(word))} />
+          <SpeakerButton onPress={() => say(asWord(word.word), sentenceFor(word))} />
           <BigButton
             label="Next"
             emoji="➡️"
@@ -86,7 +86,7 @@ function FlashCard({ word, onAnswer }: { word: WordEntry; onAnswer: (correct: bo
               size="lg"
               onPress={() => {
                 setLearning(true);
-                say(`This word is ${word.word}.`, sentenceFor(word));
+                say('This word is', asWord(word.word), sentenceFor(word));
               }}
             />
           </View>

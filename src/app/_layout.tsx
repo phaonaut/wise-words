@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 
 import { colors } from '@/constants/theme';
-import { setRate } from '@/lib/speech';
+import { setRate, setVoice } from '@/lib/speech';
 import { StoreProvider, useStore } from '@/lib/store';
 
 SplashScreen.preventAutoHideAsync();
@@ -25,7 +25,8 @@ function App() {
 
   useEffect(() => {
     setRate(data.settings.speechRate);
-  }, [data.settings.speechRate]);
+    setVoice(data.settings.voice ?? 'female');
+  }, [data.settings.speechRate, data.settings.voice]);
 
   useEffect(() => {
     if (loaded) SplashScreen.hideAsync();

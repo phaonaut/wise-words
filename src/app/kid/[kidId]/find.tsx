@@ -6,7 +6,7 @@ import { MissingKid, NoWords, RoundDone, RoundProgress, useRound } from '@/compo
 import { goBack, Screen, SpeakerButton, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { PRAISE, pickOne } from '@/data/fun';
-import { buzz, say } from '@/lib/speech';
+import { asWord, buzz, say } from '@/lib/speech';
 import { useKid } from '@/lib/store';
 import type { WordEntry } from '@/lib/types';
 import { pickDistractors, shuffle, wordKey } from '@/lib/words';
@@ -63,7 +63,7 @@ function FindQuestion({
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
-    const t = setTimeout(() => say('Find the word', target.word), 350);
+    const t = setTimeout(() => say('Find the word', asWord(target.word)), 350);
     return () => {
       clearTimeout(t);
       clearTimeout(timer.current);
@@ -76,19 +76,19 @@ function FindQuestion({
     if (key === wordKey(target.word)) {
       setSolved(true);
       buzz('good');
-      say(pickOne(PRAISE), target.word);
+      say(pickOne(PRAISE), asWord(target.word));
       timer.current = setTimeout(() => onAnswer(wrong.length === 0), 1600);
     } else if (!wrong.includes(key)) {
       buzz('oops');
       setWrong([...wrong, key]);
-      say(`That says ${choice.word}.`, `Find ${target.word}.`);
+      say('That says', asWord(choice.word), 'Find', asWord(target.word));
     }
   };
 
   return (
     <View style={styles.wrap}>
       <View style={styles.prompt}>
-        <SpeakerButton size={110} onPress={() => say(target.word)} />
+        <SpeakerButton size={110} onPress={() => say(asWord(target.word))} />
         <Txt size={20} color={colors.muted}>
           Tap 🔊 to hear the word again
         </Txt>

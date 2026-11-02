@@ -6,7 +6,7 @@ import { MissingKid, NoWords, RoundDone, RoundProgress, useRound } from '@/compo
 import { BigButton, goBack, Screen, SpeakerButton, Txt } from '@/components/ui';
 import { colors, fonts } from '@/constants/theme';
 import { PRAISE, TRY_AGAIN, pickOne } from '@/data/fun';
-import { buzz, say } from '@/lib/speech';
+import { asLetter, asWord, buzz, say } from '@/lib/speech';
 import { useKid } from '@/lib/store';
 import type { WordEntry } from '@/lib/types';
 import { sentenceFor, shuffle } from '@/lib/words';
@@ -31,7 +31,7 @@ function extraLetters(word: string) {
   return extras;
 }
 
-const sayWord = (w: WordEntry) => say('Spell', w.word, sentenceFor(w), w.word);
+const sayWord = (w: WordEntry) => say('Spell', asWord(w.word), sentenceFor(w), asWord(w.word));
 
 // The app says a word; the child spells it with letter tiles (or the keyboard).
 export default function SpellIt() {
@@ -87,7 +87,7 @@ function useSpelling(target: WordEntry, onAnswer: QuestionProps['onAnswer']) {
     peek() {
       setUsedPeek(true);
       setPeeking(true);
-      say(target.word);
+      say(asWord(target.word));
       timers.current.push(setTimeout(() => setPeeking(false), 2500));
     },
     right() {
@@ -104,7 +104,7 @@ function useSpelling(target: WordEntry, onAnswer: QuestionProps['onAnswer']) {
       buzz('oops');
       if (next >= MAX_TRIES) {
         setResult('revealed');
-        say(`${target.word} is spelled`, [...target.word].join(', '));
+        say(asWord(target.word), 'is spelled', ...[...target.word].map(asLetter));
         return true;
       }
       say(pickOne(TRY_AGAIN));
