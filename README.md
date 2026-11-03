@@ -38,14 +38,15 @@ npx eas-cli@latest build -p android --profile preview
 1. Download the APK from the link it gives you, then open it on the tablet. You may need to allow "Apps from Unknown Sources" in the tablet's settings.
 2. In the parent settings for each child profile, add the app to their content.
 
-**As a website:**
+**As a website:** every push to `master` publishes the app to <https://phaonaut.github.io/wise-words/> with GitHub
+Pages (see `.github/workflows/deploy-web.yml`). One-time setup: in the GitHub repo, go to **Settings → Pages** and set
+**Source** to **GitHub Actions**.
 
-```bash
-npx expo export --platform web
-```
+1. Open the address in the tablet's browser (Silk). Use the browser menu to add it to the home screen.
+2. In Amazon Kids, approve the address under the child profile's web settings.
 
-1. Host the `dist` folder (for example on Netlify or GitHub Pages).
-2. Approve the address under the child profile's web settings.
+Progress is saved in that browser, so clearing its data resets it. The site lives under `/wise-words`
+(`experiments.baseUrl` in `app.json`). Change that if you host it somewhere else.
 
 ## Voice
 
