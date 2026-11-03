@@ -35,9 +35,19 @@ const LETTER_NAMES = {
 
 // How the voice should say words it could get wrong on their own (Kokoro/misaki phonemes).
 const PRONOUNCE = {
-  a: '[a](/ə/)',
   live: '[live](/lˈɪv/)',
   read: '[read](/ɹˈid/)',
+};
+
+// Words left to the device voice because no recording sounded right.
+const DEVICE_VOICE = new Set(['a']);
+
+// Phrases that need different text to sound right. Titles get "!" so they don't trail off,
+// and "and" is stressed so it isn't swallowed ("Hear and Find" was coming out as "Here Find").
+const SAY = {
+  Flashcards: 'Flashcards!',
+  'Hear and Find': 'Hear [and](/ˈænd/) Find!',
+  'Spell It': 'Spell it!',
 };
 
 const slug = (text) =>
@@ -58,11 +68,12 @@ const add = (key, file, text, speed) => {
 for (const list of BUILT_IN_LISTS) {
   for (const { word } of list.words) {
     const k = word.toLowerCase();
+    if (DEVICE_VOICE.has(k)) continue;
     add(`w:${k}`, `w-${slug(word)}`, `${PRONOUNCE[k] ?? word}.`, SLOW);
   }
 }
 for (const sentence of Object.values(SENTENCES)) add(`p:${sentence}`, `s-${slug(sentence)}`, sentence);
-for (const phrase of PHRASES) add(`p:${phrase}`, `p-${slug(phrase)}`, phrase);
+for (const phrase of PHRASES) add(`p:${phrase}`, `p-${slug(phrase)}`, SAY[phrase] ?? phrase);
 for (const [ch, name] of Object.entries(LETTER_NAMES)) add(`l:${ch}`, `l-${ch}`, `${name}.`, SLOW);
 
 const all = [...clips.values()];

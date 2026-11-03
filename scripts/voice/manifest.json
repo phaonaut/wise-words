@@ -1,11 +1,5 @@
 [
  {
-  "key": "w:a",
-  "file": "w-a",
-  "text": "[a](/ə/).",
-  "speed": 0.75
- },
- {
   "key": "w:and",
   "file": "w-and",
   "text": "and.",
@@ -1567,17 +1561,17 @@
  {
   "key": "p:Flashcards",
   "file": "p-flashcards",
-  "text": "Flashcards"
+  "text": "Flashcards!"
  },
  {
   "key": "p:Hear and Find",
   "file": "p-hear-and-find",
-  "text": "Hear and Find"
+  "text": "Hear [and](/ˈænd/) Find!"
  },
  {
   "key": "p:Spell It",
   "file": "p-spell-it",
-  "text": "Spell It"
+  "text": "Spell it!"
  },
  {
   "key": "p:I can read!",

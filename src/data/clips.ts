@@ -4,7 +4,6 @@ export type VoiceName = 'female' | 'male';
 
 export const CLIPS: Record<VoiceName, Record<string, number>> = {
   female: {
-    "w:a": require('../../assets/audio/female/w-a.mp3'),
     "w:and": require('../../assets/audio/female/w-and.mp3'),
     "w:away": require('../../assets/audio/female/w-away.mp3'),
     "w:big": require('../../assets/audio/female/w-big.mp3'),
@@ -314,7 +313,6 @@ export const CLIPS: Record<VoiceName, Record<string, number>> = {
     "l:z": require('../../assets/audio/female/l-z.mp3'),
   },
   male: {
-    "w:a": require('../../assets/audio/male/w-a.mp3'),
     "w:and": require('../../assets/audio/male/w-and.mp3'),
     "w:away": require('../../assets/audio/male/w-away.mp3'),
     "w:big": require('../../assets/audio/male/w-big.mp3'),
