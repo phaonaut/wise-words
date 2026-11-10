@@ -41,8 +41,6 @@ export type Rewards = { stars: number; stickers: string[] };
 
 export type Settings = {
   speechRate: number;
-  /** Missing in data saved before the voice choice existed; treated as 'female'. */
-  voice?: 'female' | 'male';
 };
 
 export type AppData = {

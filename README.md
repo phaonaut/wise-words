@@ -50,23 +50,32 @@ Progress is saved in that browser, so clearing its data resets it. The site live
 
 ## Voice
 
-The built-in words, sentences, letter names and phrases are pre-recorded MP3s in `assets/audio/female` and
-`assets/audio/male`. Grown-ups pick the voice in the app. They were made with
-[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M), a free, open-source voice (Apache-2.0): `af_heart` for
-the female voice and `am_michael` for the male voice. Words from your own lists use the device's voice.
+The built-in words, sentences, letter names and phrases are pre-recorded MP3s in `assets/audio`, made with Gemini's
+text-to-speech in Google AI Studio (one male voice). Words from your own lists use the device's voice. Grown-ups can set
+the speed (Slow / Medium / Fast).
 
-To re-record after adding phrases or sentences (needs Python 3.10–3.12):
+To record new or replacement clips:
 
-```bash
-py -3.12 -m venv .kokoro-env
-.kokoro-env\Scripts\python -m pip install "kokoro>=0.9.4" soundfile
-npm run voice:list
-.kokoro-env\Scripts\python scripts/voice/generate.py --set female
-.kokoro-env\Scripts\python scripts/voice/generate.py --set male
-```
+1. If you added phrases or sentences, run `npm run voice:list` and then `npm run voice:prompts`. This updates
+   `scripts/voice/gemini-prompts.md`.
+2. For each batch in that file, paste its style and text into AI Studio → **Generate speech**. Use the same voice as
+   before, and download the WAV.
+3. Save each WAV as `voice-recordings/<batch>.wav`, for example `voice-recordings/words-prek.wav`.
+4. Cut the batches into clips. The first time, set up Python 3.10 or newer with:
 
-Existing clips are skipped, so this only records what's new. Add `--force` to redo everything, for example with a different
-`--voice`.
+   ```bash
+   py -m venv .voice-env
+   .voice-envScriptspython -m pip install numpy soundfile
+   ```
+
+   Then run:
+
+   ```bash
+   .voice-envScriptspython scripts/voice/split.py
+   ```
+
+A batch is only written if the number of spoken pieces matches its script. If a line is skipped or doubled, re-record
+that batch.
 
 ## Code map
 

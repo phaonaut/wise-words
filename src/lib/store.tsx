@@ -149,8 +149,3 @@ export const setSpeechRate = (speechRate: number) => (d: AppData): AppData => ({
   ...d,
   settings: { ...d.settings, speechRate },
 });
-
-export const setVoice = (voice: 'female' | 'male') => (d: AppData): AppData => ({
-  ...d,
-  settings: { ...d.settings, voice },
-});

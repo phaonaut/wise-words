@@ -3,7 +3,7 @@ import * as Haptics from 'expo-haptics';
 import * as Speech from 'expo-speech';
 import { Platform } from 'react-native';
 
-import { CLIPS, type VoiceName } from '@/data/clips';
+import { CLIPS } from '@/data/clips';
 
 /**
  * Something to say: a phrase or sentence (plain text), a word, or a letter name.
@@ -19,18 +19,12 @@ const CLIP_PACE = 0.85;
 const GAP_MS = 120;
 
 let rate = CLIP_PACE;
-let voice: VoiceName = 'female';
 let player: AudioPlayer | null = null;
 let finishClip: (() => void) | null = null;
 let current = 0;
 
 export function setRate(next: number) {
   rate = next;
-}
-
-/** Which recorded voice to use. Words without a recording still use the device voice. */
-export function setVoice(next: VoiceName) {
-  voice = next;
 }
 
 function getPlayer() {
@@ -45,11 +39,10 @@ function getPlayer() {
 }
 
 function clipFor(part: Exclude<Part, undefined | false>): number | undefined {
-  const clips = CLIPS[voice];
-  if (typeof part === 'string') return clips[`p:${part}`];
-  if ('word' in part) return clips[`w:${part.word.trim().toLowerCase()}`];
+  if (typeof part === 'string') return CLIPS[`p:${part}`];
+  if ('word' in part) return CLIPS[`w:${part.word.trim().toLowerCase()}`];
   const ch = part.letter.toLowerCase();
-  return ch === "'" ? clips['p:apostrophe'] : clips[`l:${ch}`];
+  return ch === "'" ? CLIPS['p:apostrophe'] : CLIPS[`l:${ch}`];
 }
 
 function textFor(part: Exclude<Part, undefined | false>) {

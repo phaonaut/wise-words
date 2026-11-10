@@ -1,0 +1,1297 @@
+[
+ {
+  "id": "words-prek",
+  "title": "Pre-K sight words",
+  "style": "A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.",
+  "items": [
+   {
+    "file": "w-a",
+    "text": "a."
+   },
+   {
+    "file": "w-and",
+    "text": "and."
+   },
+   {
+    "file": "w-away",
+    "text": "away."
+   },
+   {
+    "file": "w-big",
+    "text": "big."
+   },
+   {
+    "file": "w-blue",
+    "text": "blue."
+   },
+   {
+    "file": "w-can",
+    "text": "can."
+   },
+   {
+    "file": "w-come",
+    "text": "come."
+   },
+   {
+    "file": "w-down",
+    "text": "down."
+   },
+   {
+    "file": "w-find",
+    "text": "find."
+   },
+   {
+    "file": "w-for",
+    "text": "for."
+   },
+   {
+    "file": "w-funny",
+    "text": "funny."
+   },
+   {
+    "file": "w-go",
+    "text": "go."
+   },
+   {
+    "file": "w-help",
+    "text": "help."
+   },
+   {
+    "file": "w-here",
+    "text": "here."
+   },
+   {
+    "file": "w-i",
+    "text": "I."
+   },
+   {
+    "file": "w-in",
+    "text": "in."
+   },
+   {
+    "file": "w-is",
+    "text": "is."
+   },
+   {
+    "file": "w-it",
+    "text": "it."
+   },
+   {
+    "file": "w-jump",
+    "text": "jump."
+   },
+   {
+    "file": "w-little",
+    "text": "little."
+   },
+   {
+    "file": "w-look",
+    "text": "look."
+   },
+   {
+    "file": "w-make",
+    "text": "make."
+   },
+   {
+    "file": "w-me",
+    "text": "me."
+   },
+   {
+    "file": "w-my",
+    "text": "my."
+   },
+   {
+    "file": "w-not",
+    "text": "not."
+   },
+   {
+    "file": "w-one",
+    "text": "one."
+   },
+   {
+    "file": "w-play",
+    "text": "play."
+   },
+   {
+    "file": "w-red",
+    "text": "red."
+   },
+   {
+    "file": "w-run",
+    "text": "run."
+   },
+   {
+    "file": "w-said",
+    "text": "said."
+   },
+   {
+    "file": "w-see",
+    "text": "see."
+   },
+   {
+    "file": "w-the",
+    "text": "the."
+   },
+   {
+    "file": "w-three",
+    "text": "three."
+   },
+   {
+    "file": "w-to",
+    "text": "to."
+   },
+   {
+    "file": "w-two",
+    "text": "two."
+   },
+   {
+    "file": "w-up",
+    "text": "up."
+   },
+   {
+    "file": "w-we",
+    "text": "we."
+   },
+   {
+    "file": "w-where",
+    "text": "where."
+   },
+   {
+    "file": "w-yellow",
+    "text": "yellow."
+   },
+   {
+    "file": "w-you",
+    "text": "you."
+   }
+  ]
+ },
+ {
+  "id": "words-k",
+  "title": "Kindergarten sight words",
+  "style": "A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.",
+  "items": [
+   {
+    "file": "w-all",
+    "text": "all."
+   },
+   {
+    "file": "w-am",
+    "text": "am."
+   },
+   {
+    "file": "w-are",
+    "text": "are."
+   },
+   {
+    "file": "w-at",
+    "text": "at."
+   },
+   {
+    "file": "w-ate",
+    "text": "ate."
+   },
+   {
+    "file": "w-be",
+    "text": "be."
+   },
+   {
+    "file": "w-black",
+    "text": "black."
+   },
+   {
+    "file": "w-brown",
+    "text": "brown."
+   },
+   {
+    "file": "w-but",
+    "text": "but."
+   },
+   {
+    "file": "w-came",
+    "text": "came."
+   },
+   {
+    "file": "w-did",
+    "text": "did."
+   },
+   {
+    "file": "w-do",
+    "text": "do."
+   },
+   {
+    "file": "w-eat",
+    "text": "eat."
+   },
+   {
+    "file": "w-four",
+    "text": "four."
+   },
+   {
+    "file": "w-get",
+    "text": "get."
+   },
+   {
+    "file": "w-good",
+    "text": "good."
+   },
+   {
+    "file": "w-have",
+    "text": "have."
+   },
+   {
+    "file": "w-he",
+    "text": "he."
+   },
+   {
+    "file": "w-into",
+    "text": "into."
+   },
+   {
+    "file": "w-like",
+    "text": "like."
+   },
+   {
+    "file": "w-must",
+    "text": "must."
+   },
+   {
+    "file": "w-new",
+    "text": "new."
+   },
+   {
+    "file": "w-no",
+    "text": "no."
+   },
+   {
+    "file": "w-now",
+    "text": "now."
+   },
+   {
+    "file": "w-on",
+    "text": "on."
+   },
+   {
+    "file": "w-our",
+    "text": "our."
+   },
+   {
+    "file": "w-out",
+    "text": "out."
+   },
+   {
+    "file": "w-please",
+    "text": "please."
+   },
+   {
+    "file": "w-pretty",
+    "text": "pretty."
+   },
+   {
+    "file": "w-ran",
+    "text": "ran."
+   },
+   {
+    "file": "w-ride",
+    "text": "ride."
+   },
+   {
+    "file": "w-saw",
+    "text": "saw."
+   },
+   {
+    "file": "w-say",
+    "text": "say."
+   },
+   {
+    "file": "w-she",
+    "text": "she."
+   },
+   {
+    "file": "w-so",
+    "text": "so."
+   },
+   {
+    "file": "w-soon",
+    "text": "soon."
+   },
+   {
+    "file": "w-that",
+    "text": "that."
+   },
+   {
+    "file": "w-there",
+    "text": "there."
+   },
+   {
+    "file": "w-they",
+    "text": "they."
+   },
+   {
+    "file": "w-this",
+    "text": "this."
+   },
+   {
+    "file": "w-too",
+    "text": "too."
+   },
+   {
+    "file": "w-under",
+    "text": "under."
+   },
+   {
+    "file": "w-want",
+    "text": "want."
+   },
+   {
+    "file": "w-was",
+    "text": "was."
+   },
+   {
+    "file": "w-well",
+    "text": "well."
+   },
+   {
+    "file": "w-went",
+    "text": "went."
+   },
+   {
+    "file": "w-what",
+    "text": "what."
+   },
+   {
+    "file": "w-white",
+    "text": "white."
+   },
+   {
+    "file": "w-who",
+    "text": "who."
+   },
+   {
+    "file": "w-will",
+    "text": "will."
+   },
+   {
+    "file": "w-with",
+    "text": "with."
+   },
+   {
+    "file": "w-yes",
+    "text": "yes."
+   }
+  ]
+ },
+ {
+  "id": "words-1",
+  "title": "1st grade sight words",
+  "style": "A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.",
+  "items": [
+   {
+    "file": "w-after",
+    "text": "after."
+   },
+   {
+    "file": "w-again",
+    "text": "again."
+   },
+   {
+    "file": "w-an",
+    "text": "an."
+   },
+   {
+    "file": "w-any",
+    "text": "any."
+   },
+   {
+    "file": "w-as",
+    "text": "as."
+   },
+   {
+    "file": "w-ask",
+    "text": "ask."
+   },
+   {
+    "file": "w-by",
+    "text": "by."
+   },
+   {
+    "file": "w-could",
+    "text": "could."
+   },
+   {
+    "file": "w-every",
+    "text": "every."
+   },
+   {
+    "file": "w-fly",
+    "text": "fly."
+   },
+   {
+    "file": "w-from",
+    "text": "from."
+   },
+   {
+    "file": "w-give",
+    "text": "give."
+   },
+   {
+    "file": "w-going",
+    "text": "going."
+   },
+   {
+    "file": "w-had",
+    "text": "had."
+   },
+   {
+    "file": "w-has",
+    "text": "has."
+   },
+   {
+    "file": "w-her",
+    "text": "her."
+   },
+   {
+    "file": "w-him",
+    "text": "him."
+   },
+   {
+    "file": "w-his",
+    "text": "his."
+   },
+   {
+    "file": "w-how",
+    "text": "how."
+   },
+   {
+    "file": "w-just",
+    "text": "just."
+   },
+   {
+    "file": "w-know",
+    "text": "know."
+   },
+   {
+    "file": "w-let",
+    "text": "let."
+   },
+   {
+    "file": "w-live",
+    "text": "live."
+   },
+   {
+    "file": "w-may",
+    "text": "may."
+   },
+   {
+    "file": "w-of",
+    "text": "of."
+   },
+   {
+    "file": "w-old",
+    "text": "old."
+   },
+   {
+    "file": "w-once",
+    "text": "once."
+   },
+   {
+    "file": "w-open",
+    "text": "open."
+   },
+   {
+    "file": "w-over",
+    "text": "over."
+   },
+   {
+    "file": "w-put",
+    "text": "put."
+   },
+   {
+    "file": "w-round",
+    "text": "round."
+   },
+   {
+    "file": "w-some",
+    "text": "some."
+   },
+   {
+    "file": "w-stop",
+    "text": "stop."
+   },
+   {
+    "file": "w-take",
+    "text": "take."
+   },
+   {
+    "file": "w-thank",
+    "text": "thank."
+   },
+   {
+    "file": "w-them",
+    "text": "them."
+   },
+   {
+    "file": "w-then",
+    "text": "then."
+   },
+   {
+    "file": "w-think",
+    "text": "think."
+   },
+   {
+    "file": "w-walk",
+    "text": "walk."
+   },
+   {
+    "file": "w-were",
+    "text": "were."
+   },
+   {
+    "file": "w-when",
+    "text": "when."
+   }
+  ]
+ },
+ {
+  "id": "words-2",
+  "title": "2nd grade sight words",
+  "style": "A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.",
+  "items": [
+   {
+    "file": "w-always",
+    "text": "always."
+   },
+   {
+    "file": "w-around",
+    "text": "around."
+   },
+   {
+    "file": "w-because",
+    "text": "because."
+   },
+   {
+    "file": "w-been",
+    "text": "been."
+   },
+   {
+    "file": "w-before",
+    "text": "before."
+   },
+   {
+    "file": "w-best",
+    "text": "best."
+   },
+   {
+    "file": "w-both",
+    "text": "both."
+   },
+   {
+    "file": "w-buy",
+    "text": "buy."
+   },
+   {
+    "file": "w-call",
+    "text": "call."
+   },
+   {
+    "file": "w-cold",
+    "text": "cold."
+   },
+   {
+    "file": "w-does",
+    "text": "does."
+   },
+   {
+    "file": "w-dont",
+    "text": "don't."
+   },
+   {
+    "file": "w-fast",
+    "text": "fast."
+   },
+   {
+    "file": "w-first",
+    "text": "first."
+   },
+   {
+    "file": "w-five",
+    "text": "five."
+   },
+   {
+    "file": "w-found",
+    "text": "found."
+   },
+   {
+    "file": "w-gave",
+    "text": "gave."
+   },
+   {
+    "file": "w-goes",
+    "text": "goes."
+   },
+   {
+    "file": "w-green",
+    "text": "green."
+   },
+   {
+    "file": "w-its",
+    "text": "its."
+   },
+   {
+    "file": "w-made",
+    "text": "made."
+   },
+   {
+    "file": "w-many",
+    "text": "many."
+   },
+   {
+    "file": "w-off",
+    "text": "off."
+   },
+   {
+    "file": "w-or",
+    "text": "or."
+   },
+   {
+    "file": "w-pull",
+    "text": "pull."
+   },
+   {
+    "file": "w-read",
+    "text": "read."
+   },
+   {
+    "file": "w-right",
+    "text": "right."
+   },
+   {
+    "file": "w-sing",
+    "text": "sing."
+   },
+   {
+    "file": "w-sit",
+    "text": "sit."
+   },
+   {
+    "file": "w-sleep",
+    "text": "sleep."
+   },
+   {
+    "file": "w-tell",
+    "text": "tell."
+   },
+   {
+    "file": "w-their",
+    "text": "their."
+   },
+   {
+    "file": "w-these",
+    "text": "these."
+   },
+   {
+    "file": "w-those",
+    "text": "those."
+   },
+   {
+    "file": "w-upon",
+    "text": "upon."
+   },
+   {
+    "file": "w-us",
+    "text": "us."
+   },
+   {
+    "file": "w-use",
+    "text": "use."
+   },
+   {
+    "file": "w-very",
+    "text": "very."
+   },
+   {
+    "file": "w-wash",
+    "text": "wash."
+   },
+   {
+    "file": "w-which",
+    "text": "which."
+   },
+   {
+    "file": "w-why",
+    "text": "why."
+   },
+   {
+    "file": "w-wish",
+    "text": "wish."
+   },
+   {
+    "file": "w-work",
+    "text": "work."
+   },
+   {
+    "file": "w-would",
+    "text": "would."
+   },
+   {
+    "file": "w-write",
+    "text": "write."
+   },
+   {
+    "file": "w-your",
+    "text": "your."
+   }
+  ]
+ },
+ {
+  "id": "words-3",
+  "title": "3rd grade sight words",
+  "style": "A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.",
+  "items": [
+   {
+    "file": "w-about",
+    "text": "about."
+   },
+   {
+    "file": "w-better",
+    "text": "better."
+   },
+   {
+    "file": "w-bring",
+    "text": "bring."
+   },
+   {
+    "file": "w-carry",
+    "text": "carry."
+   },
+   {
+    "file": "w-clean",
+    "text": "clean."
+   },
+   {
+    "file": "w-cut",
+    "text": "cut."
+   },
+   {
+    "file": "w-done",
+    "text": "done."
+   },
+   {
+    "file": "w-draw",
+    "text": "draw."
+   },
+   {
+    "file": "w-drink",
+    "text": "drink."
+   },
+   {
+    "file": "w-eight",
+    "text": "eight."
+   },
+   {
+    "file": "w-fall",
+    "text": "fall."
+   },
+   {
+    "file": "w-far",
+    "text": "far."
+   },
+   {
+    "file": "w-full",
+    "text": "full."
+   },
+   {
+    "file": "w-got",
+    "text": "got."
+   },
+   {
+    "file": "w-grow",
+    "text": "grow."
+   },
+   {
+    "file": "w-hold",
+    "text": "hold."
+   },
+   {
+    "file": "w-hot",
+    "text": "hot."
+   },
+   {
+    "file": "w-hurt",
+    "text": "hurt."
+   },
+   {
+    "file": "w-if",
+    "text": "if."
+   },
+   {
+    "file": "w-keep",
+    "text": "keep."
+   },
+   {
+    "file": "w-kind",
+    "text": "kind."
+   },
+   {
+    "file": "w-laugh",
+    "text": "laugh."
+   },
+   {
+    "file": "w-light",
+    "text": "light."
+   },
+   {
+    "file": "w-long",
+    "text": "long."
+   },
+   {
+    "file": "w-much",
+    "text": "much."
+   },
+   {
+    "file": "w-myself",
+    "text": "myself."
+   },
+   {
+    "file": "w-never",
+    "text": "never."
+   },
+   {
+    "file": "w-only",
+    "text": "only."
+   },
+   {
+    "file": "w-own",
+    "text": "own."
+   },
+   {
+    "file": "w-pick",
+    "text": "pick."
+   },
+   {
+    "file": "w-seven",
+    "text": "seven."
+   },
+   {
+    "file": "w-shall",
+    "text": "shall."
+   },
+   {
+    "file": "w-show",
+    "text": "show."
+   },
+   {
+    "file": "w-six",
+    "text": "six."
+   },
+   {
+    "file": "w-small",
+    "text": "small."
+   },
+   {
+    "file": "w-start",
+    "text": "start."
+   },
+   {
+    "file": "w-ten",
+    "text": "ten."
+   },
+   {
+    "file": "w-today",
+    "text": "today."
+   },
+   {
+    "file": "w-together",
+    "text": "together."
+   },
+   {
+    "file": "w-try",
+    "text": "try."
+   },
+   {
+    "file": "w-warm",
+    "text": "warm."
+   }
+  ]
+ },
+ {
+  "id": "letters",
+  "title": "Letter names",
+  "style": "A warm, patient kindergarten teacher saying the names of the letters of the alphabet to a five-year-old. Say each letter name once, slowly and clearly. Leave a long pause after every letter. Do not say anything else.",
+  "items": [
+   {
+    "file": "l-a",
+    "text": "A."
+   },
+   {
+    "file": "l-b",
+    "text": "B."
+   },
+   {
+    "file": "l-c",
+    "text": "C."
+   },
+   {
+    "file": "l-d",
+    "text": "D."
+   },
+   {
+    "file": "l-e",
+    "text": "E."
+   },
+   {
+    "file": "l-f",
+    "text": "F."
+   },
+   {
+    "file": "l-g",
+    "text": "G."
+   },
+   {
+    "file": "l-h",
+    "text": "H."
+   },
+   {
+    "file": "l-i",
+    "text": "I."
+   },
+   {
+    "file": "l-j",
+    "text": "J."
+   },
+   {
+    "file": "l-k",
+    "text": "K."
+   },
+   {
+    "file": "l-l",
+    "text": "L."
+   },
+   {
+    "file": "l-m",
+    "text": "M."
+   },
+   {
+    "file": "l-n",
+    "text": "N."
+   },
+   {
+    "file": "l-o",
+    "text": "O."
+   },
+   {
+    "file": "l-p",
+    "text": "P."
+   },
+   {
+    "file": "l-q",
+    "text": "Q."
+   },
+   {
+    "file": "l-r",
+    "text": "R."
+   },
+   {
+    "file": "l-s",
+    "text": "S."
+   },
+   {
+    "file": "l-t",
+    "text": "T."
+   },
+   {
+    "file": "l-u",
+    "text": "U."
+   },
+   {
+    "file": "l-v",
+    "text": "V."
+   },
+   {
+    "file": "l-w",
+    "text": "W."
+   },
+   {
+    "file": "l-x",
+    "text": "X."
+   },
+   {
+    "file": "l-y",
+    "text": "Y."
+   },
+   {
+    "file": "l-z",
+    "text": "Z."
+   }
+  ]
+ },
+ {
+  "id": "phrases",
+  "title": "Phrases",
+  "style": "A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.",
+  "items": [
+   {
+    "file": "p-find-the-word",
+    "text": "Find the word"
+   },
+   {
+    "file": "p-find",
+    "text": "Find"
+   },
+   {
+    "file": "p-that-says",
+    "text": "That says"
+   },
+   {
+    "file": "p-this-word-is",
+    "text": "This word is"
+   },
+   {
+    "file": "p-spell",
+    "text": "Spell"
+   },
+   {
+    "file": "p-is-spelled",
+    "text": "is spelled"
+   },
+   {
+    "file": "p-apostrophe",
+    "text": "apostrophe"
+   },
+   {
+    "file": "p-great-job",
+    "text": "Great job!"
+   },
+   {
+    "file": "p-you-got-a-new-sticker",
+    "text": "You got a new sticker!"
+   },
+   {
+    "file": "p-hi-ready-to-learn",
+    "text": "Hi! Ready to learn?"
+   },
+   {
+    "file": "p-flashcards",
+    "text": "Flashcards!"
+   },
+   {
+    "file": "p-hear-and-find",
+    "text": "Hear and Find!"
+   },
+   {
+    "file": "p-spell-it",
+    "text": "Spell it!"
+   },
+   {
+    "file": "p-i-can-read",
+    "text": "I can read!"
+   },
+   {
+    "file": "p-you-got-it",
+    "text": "You got it!"
+   },
+   {
+    "file": "p-awesome",
+    "text": "Awesome!"
+   },
+   {
+    "file": "p-way-to-go",
+    "text": "Way to go!"
+   },
+   {
+    "file": "p-super",
+    "text": "Super!"
+   },
+   {
+    "file": "p-nice-work",
+    "text": "Nice work!"
+   },
+   {
+    "file": "p-yes",
+    "text": "Yes!"
+   },
+   {
+    "file": "p-try-again",
+    "text": "Try again!"
+   },
+   {
+    "file": "p-almost-try-again",
+    "text": "Almost! Try again."
+   },
+   {
+    "file": "p-keep-going",
+    "text": "Keep going!"
+   }
+  ]
+ },
+ {
+  "id": "sentences-1",
+  "title": "Sentences, part 1",
+  "style": "A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.",
+  "items": [
+   {
+    "file": "s-i-see-a-cat",
+    "text": "I see a cat."
+   },
+   {
+    "file": "s-i-like-to-play",
+    "text": "I like to play."
+   },
+   {
+    "file": "s-we-go-to-school",
+    "text": "We go to school."
+   },
+   {
+    "file": "s-i-have-two-hands",
+    "text": "I have two hands."
+   },
+   {
+    "file": "s-i-want-to-come-too",
+    "text": "I want to come too."
+   },
+   {
+    "file": "s-the-ball-is-over-there",
+    "text": "The ball is over there."
+   },
+   {
+    "file": "s-the-kids-ride-their-bikes",
+    "text": "The kids ride their bikes."
+   },
+   {
+    "file": "s-this-gift-is-for-you",
+    "text": "This gift is for you."
+   },
+   {
+    "file": "s-a-dog-has-four-legs",
+    "text": "A dog has four legs."
+   },
+   {
+    "file": "s-sit-by-me",
+    "text": "Sit by me."
+   },
+   {
+    "file": "s-we-buy-food-at-the-store",
+    "text": "We buy food at the store."
+   },
+   {
+    "file": "s-no-thank-you",
+    "text": "No, thank you."
+   },
+   {
+    "file": "s-i-know-my-name",
+    "text": "I know my name."
+   },
+   {
+    "file": "s-turn-to-the-right",
+    "text": "Turn to the right."
+   },
+   {
+    "file": "s-i-can-write-my-name",
+    "text": "I can write my name."
+   },
+   {
+    "file": "s-i-have-one-nose",
+    "text": "I have one nose."
+   },
+   {
+    "file": "s-i-ate-my-lunch",
+    "text": "I ate my lunch."
+   },
+   {
+    "file": "s-a-spider-has-eight-legs",
+    "text": "A spider has eight legs."
+   },
+   {
+    "file": "s-i-have-new-shoes",
+    "text": "I have new shoes."
+   },
+   {
+    "file": "s-i-want-to-be-a-cat",
+    "text": "I want to be a cat."
+   }
+  ]
+ },
+ {
+  "id": "sentences-2",
+  "title": "Sentences, part 2",
+  "style": "A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.",
+  "items": [
+   {
+    "file": "s-i-see-a-bird",
+    "text": "I see a bird."
+   },
+   {
+    "file": "s-the-dog-wags-its-tail",
+    "text": "The dog wags its tail."
+   },
+   {
+    "file": "s-this-is-our-house",
+    "text": "This is our house."
+   },
+   {
+    "file": "s-which-one-do-you-want",
+    "text": "Which one do you want?"
+   },
+   {
+    "file": "s-would-you-like-to-play",
+    "text": "Would you like to play?"
+   },
+   {
+    "file": "s-i-am-so-happy",
+    "text": "I am so happy."
+   },
+   {
+    "file": "s-the-apple-is-red",
+    "text": "The apple is red."
+   },
+   {
+    "file": "s-i-like-to-read-books",
+    "text": "I like to read books."
+   },
+   {
+    "file": "s-i-live-in-a-house",
+    "text": "I live in a house."
+   },
+   {
+    "file": "s-the-sky-is-blue",
+    "text": "The sky is blue."
+   },
+   {
+    "file": "s-i-made-a-cake",
+    "text": "I made a cake."
+   },
+   {
+    "file": "s-come-here-please",
+    "text": "Come here, please."
+   },
+   {
+    "file": "s-where-is-my-hat",
+    "text": "Where is my hat?"
+   },
+   {
+    "file": "s-can-i-have-some-milk",
+    "text": "Can I have some milk?"
+   },
+   {
+    "file": "s-i-am-not-sad",
+    "text": "I am not sad."
+   },
+   {
+    "file": "s-i-gave-him-a-ball",
+    "text": "I gave him a ball."
+   },
+   {
+    "file": "s-i-wish-i-could-fly",
+    "text": "I wish I could fly."
+   },
+   {
+    "file": "s-please-close-the-door",
+    "text": "Please close the door."
+   },
+   {
+    "file": "s-the-wind-is-cold",
+    "text": "The wind is cold."
+   }
+  ]
+ }
+]

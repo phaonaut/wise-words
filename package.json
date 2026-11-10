@@ -10,7 +10,8 @@
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
     "icons": "node scripts/make-icons.mjs",
-    "voice:list": "node scripts/voice/manifest.mjs"
+    "voice:list": "node scripts/voice/manifest.mjs",
+    "voice:prompts": "node scripts/voice/gemini-prompts.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/andika": "^0.4.1",

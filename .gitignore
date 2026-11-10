@@ -42,5 +42,9 @@ example
 /ios
 /android
 
-# Python env for scripts/voice/generate.py
-.kokoro-env/
+# Python env for scripts/voice/split.py
+.voice-env/
+
+# Raw Gemini downloads for scripts/voice/split.py
+voice-recordings/
+__pycache__/
