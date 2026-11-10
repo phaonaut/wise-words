@@ -1,5 +1,9 @@
 export type Skill = 'read' | 'spell';
 
+export type MathGame = 'count' | 'add' | 'compare';
+/** 1 is about Pre-K, 4 is about 2nd grade. See MATH_LEVELS in lib/math.ts. */
+export type MathLevel = 1 | 2 | 3 | 4;
+
 export type WordEntry = {
   word: string;
   /** Example sentence, read aloud to tell apart words that sound alike (to / two / too). */
@@ -21,6 +25,8 @@ export type Kid = {
   listIds: string[];
   spellInput: 'tiles' | 'keyboard';
   findChoices: 3 | 4;
+  /** Missing for kids added before math existed; treated as level 1. */
+  mathLevel?: MathLevel;
 };
 
 export type WordProgress = {
@@ -39,6 +45,9 @@ export type KidProgress = Record<Skill, Record<string, WordProgress>>;
 
 export type Rewards = { stars: number; stickers: string[] };
 
+/** How many math problems were right on the first try, out of how many were tried. */
+export type MathTally = { right: number; total: number };
+
 export type Settings = {
   speechRate: number;
 };
@@ -49,5 +58,7 @@ export type AppData = {
   customLists: WordList[];
   progress: Record<string, KidProgress>;
   rewards: Record<string, Rewards>;
+  /** Math tallies by kid id, then by "<game>:<level>". */
+  math: Record<string, Record<string, MathTally>>;
   settings: Settings;
 };

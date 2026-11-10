@@ -3,7 +3,17 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from '
 
 import { STICKERS } from '@/data/fun';
 import { applyAnswer } from '@/lib/srs';
-import type { AppData, Kid, KidProgress, Rewards, Skill, WordList } from '@/lib/types';
+import type {
+  AppData,
+  Kid,
+  KidProgress,
+  MathGame,
+  MathLevel,
+  MathTally,
+  Rewards,
+  Skill,
+  WordList,
+} from '@/lib/types';
 import { wordKey } from '@/lib/words';
 
 const STORAGE_KEY = 'wise-words/data/v1';
@@ -14,6 +24,7 @@ const EMPTY: AppData = {
   customLists: [],
   progress: {},
   rewards: {},
+  math: {},
   settings: { speechRate: 0.85 },
 };
 
@@ -74,6 +85,10 @@ export function rewardsFor(data: AppData, kidId: string): Rewards {
   return data.rewards[kidId] ?? emptyRewards();
 }
 
+export function mathTally(data: AppData, kidId: string, game: MathGame, level: MathLevel): MathTally {
+  return data.math[kidId]?.[`${game}:${level}`] ?? { right: 0, total: 0 };
+}
+
 // ---- Changes. Each takes the current data and returns new data. ----
 
 export const saveKid = (kid: Kid) => (d: AppData): AppData => ({
@@ -86,15 +101,18 @@ export const saveKid = (kid: Kid) => (d: AppData): AppData => ({
 export const deleteKid = (kidId: string) => (d: AppData): AppData => {
   const progress = { ...d.progress };
   const rewards = { ...d.rewards };
+  const math = { ...d.math };
   delete progress[kidId];
   delete rewards[kidId];
-  return { ...d, kids: d.kids.filter((k) => k.id !== kidId), progress, rewards };
+  delete math[kidId];
+  return { ...d, kids: d.kids.filter((k) => k.id !== kidId), progress, rewards, math };
 };
 
 export const resetKidProgress = (kidId: string) => (d: AppData): AppData => ({
   ...d,
   progress: { ...d.progress, [kidId]: emptyProgress() },
   rewards: { ...d.rewards, [kidId]: emptyRewards() },
+  math: { ...d.math, [kidId]: {} },
 });
 
 export const saveList = (list: WordList) => (d: AppData): AppData => ({
@@ -123,6 +141,25 @@ export const recordAnswer =
         [kidId]: {
           ...kidProgress,
           [skill]: { ...kidProgress[skill], [key]: applyAnswer(kidProgress[skill][key], correct) },
+        },
+      },
+      rewards: correct ? { ...d.rewards, [kidId]: { ...rewards, stars: rewards.stars + 1 } } : d.rewards,
+    };
+  };
+
+/** Counts a math answer and gives a star when it was right on the first try. */
+export const recordMath =
+  (kidId: string, game: MathGame, level: MathLevel, correct: boolean) =>
+  (d: AppData): AppData => {
+    const tally = mathTally(d, kidId, game, level);
+    const rewards = rewardsFor(d, kidId);
+    return {
+      ...d,
+      math: {
+        ...d.math,
+        [kidId]: {
+          ...d.math[kidId],
+          [`${game}:${level}`]: { right: tally.right + (correct ? 1 : 0), total: tally.total + 1 },
         },
       },
       rewards: correct ? { ...d.rewards, [kidId]: { ...rewards, stars: rewards.stars + 1 } } : d.rewards,

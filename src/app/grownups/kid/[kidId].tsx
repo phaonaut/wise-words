@@ -15,16 +15,18 @@ import {
 } from '@/components/ui';
 import { colors, fonts } from '@/constants/theme';
 import { AVATARS, KID_COLORS, pickOne } from '@/data/fun';
+import { MATH_LEVELS } from '@/lib/math';
 import { statusOf, type WordStatus } from '@/lib/srs';
 import {
   deleteKid,
+  mathTally,
   newId,
   progressFor,
   resetKidProgress,
   saveKid,
   useStore,
 } from '@/lib/store';
-import type { Kid, Skill } from '@/lib/types';
+import type { Kid, MathGame, Skill } from '@/lib/types';
 import { allLists, wordKey } from '@/lib/words';
 
 const STATUS_COLORS: Record<WordStatus, string> = {
@@ -49,6 +51,7 @@ export default function EditKid() {
         listIds: ['dolch-prek'],
         spellInput: 'tiles',
         findChoices: 3,
+        mathLevel: 1,
       },
   );
   const change = (patch: Partial<Kid>) => setKid({ ...kid, ...patch });
@@ -135,15 +138,26 @@ export default function EditKid() {
         ]}
       />
 
-      <SectionTitle>Hear & Find choices</SectionTitle>
+      <SectionTitle>Answer choices (Hear & Find and math)</SectionTitle>
       <Choice
         value={kid.findChoices}
         onChange={(findChoices) => change({ findChoices })}
         options={[
-          { value: 3, label: '3 words (easier)' },
-          { value: 4, label: '4 words' },
+          { value: 3, label: '3 choices (easier)' },
+          { value: 4, label: '4 choices' },
         ]}
       />
+
+      <SectionTitle>Math level</SectionTitle>
+      <Choice
+        value={kid.mathLevel ?? 1}
+        onChange={(mathLevel) => change({ mathLevel })}
+        options={MATH_LEVELS.map((l) => ({ value: l.level, label: l.label }))}
+      />
+      <Txt size={14} color={colors.muted} style={{ marginTop: 6 }}>
+        {MATH_LEVELS.find((l) => l.level === (kid.mathLevel ?? 1))?.detail}
+      </Txt>
+      {existing && <MathView kid={existing} />}
 
       <BigButton
         label={isNew ? 'Add child' : 'Save'}
@@ -173,6 +187,33 @@ export default function EditKid() {
         </>
       )}
     </Screen>
+  );
+}
+
+const MATH_GAMES: { game: MathGame; name: string }[] = [
+  { game: 'count', name: 'Count It' },
+  { game: 'add', name: 'Add & Subtract' },
+  { game: 'compare', name: 'More or Less' },
+];
+
+/** How the child is doing at their saved math level, to help decide when to move up. */
+function MathView({ kid }: { kid: Kid }) {
+  const { data } = useStore();
+  const level = kid.mathLevel ?? 1;
+  const tallies = MATH_GAMES.map((g) => ({ ...g, ...mathTally(data, kid.id, g.game, level) }));
+  if (tallies.every((t) => t.total === 0)) return null;
+  return (
+    <Card style={{ marginTop: 10, gap: 4 }}>
+      <Txt bold>Right on the first try at level {level}</Txt>
+      {tallies.map((t) => (
+        <Txt key={t.game} size={15} color={colors.muted}>
+          {t.name}: {t.total ? `${t.right} of ${t.total}` : 'not tried yet'}
+        </Txt>
+      ))}
+      <Txt size={14} color={colors.muted}>
+        Mostly right? Try the next level.
+      </Txt>
+    </Card>
   );
 }
 

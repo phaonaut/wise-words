@@ -6,13 +6,17 @@ import { Platform } from 'react-native';
 import { CLIPS } from '@/data/clips';
 
 /**
- * Something to say: a phrase or sentence (plain text), a word, or a letter name.
+ * Something to say: a phrase or sentence (plain text), a word, a letter name, or a number.
  * Recorded clips are used when there is one; anything else falls back to the device voice.
  */
-export type Part = string | { word: string } | { letter: string } | undefined | false;
+export type Part = string | { word: string } | { letter: string } | { number: number } | undefined | false;
+type Sayable = Exclude<Part, undefined | false>;
 
 export const asWord = (word: string) => ({ word });
 export const asLetter = (letter: string) => ({ letter });
+export const asNumber = (number: number) => ({ number });
+
+const isNumber = (part: Sayable) => typeof part !== 'string' && 'number' in part;
 
 // The clips were recorded at a kid-friendly pace, which matches the "Medium" speed setting.
 const CLIP_PACE = 0.85;
@@ -38,16 +42,18 @@ function getPlayer() {
   return player;
 }
 
-function clipFor(part: Exclude<Part, undefined | false>): number | undefined {
+function clipFor(part: Sayable): number | undefined {
   if (typeof part === 'string') return CLIPS[`p:${part}`];
   if ('word' in part) return CLIPS[`w:${part.word.trim().toLowerCase()}`];
+  if ('number' in part) return CLIPS[`n:${part.number}`];
   const ch = part.letter.toLowerCase();
   return ch === "'" ? CLIPS['p:apostrophe'] : CLIPS[`l:${ch}`];
 }
 
-function textFor(part: Exclude<Part, undefined | false>) {
+function textFor(part: Sayable) {
   if (typeof part === 'string') return part;
   if ('word' in part) return part.word;
+  if ('number' in part) return `${part.number}`;
   return part.letter === "'" ? 'apostrophe' : part.letter;
 }
 
@@ -82,20 +88,37 @@ function speakWithDevice(text: string) {
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** Says each part in order, cutting off anything still being said. */
-export function say(...parts: Part[]) {
+/**
+ * Says each part in order, cutting off anything still being said.
+ * Resolves to true when it finished, or false if something else cut it off.
+ */
+export function say(...parts: Part[]): Promise<boolean> {
   stopSpeaking();
   const id = ++current;
-  void (async () => {
-    for (const part of parts) {
-      if (!part) continue;
-      if (id !== current) return;
-      const clip = clipFor(part);
-      if (clip !== undefined) await playClip(clip);
-      else await speakWithDevice(textFor(part));
-      if (id !== current) return;
+  const todo = parts.filter((p): p is Sayable => !!p);
+  return (async () => {
+    let i = 0;
+    while (i < todo.length) {
+      if (id !== current) return false;
+      const clip = clipFor(todo[i]);
+      if (clip !== undefined) {
+        await playClip(clip);
+        i++;
+      } else {
+        // Parts with no recording go to the device voice. A run with numbers in it
+        // ("What is", 3, "plus", 2) is read as one sentence, so it doesn't pause between pieces.
+        const run: Sayable[] = [];
+        while (i < todo.length && clipFor(todo[i]) === undefined) run.push(todo[i++]);
+        const texts = run.map(textFor);
+        for (const text of run.some(isNumber) ? [texts.join(' ')] : texts) {
+          if (id !== current) return false;
+          await speakWithDevice(text);
+        }
+      }
+      if (id !== current) return false;
       await wait(GAP_MS);
     }
+    return true;
   })();
 }
 

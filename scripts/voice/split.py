@@ -23,12 +23,21 @@ OUT = ROOT / "assets" / "audio"
 FRAME = 0.02  # seconds per loudness frame
 MIN_GAP = 0.9  # a silence at least this long separates two lines (the script asks for a long pause)
 PAD = 0.06  # silence kept at each end of a clip
+SOFT = 0.004  # share of the loudest moment that still counts as a soft speech sound
+BRIDGE = 0.12  # a soft sound can sit this far past a moment of silence (the "t" ending "eight")
+MAX_GROW = 0.3  # most a clip's edge can move outwards, so it doesn't pick up a breath
+
+
+def loudness(audio: np.ndarray, rate: int) -> np.ndarray:
+    """Loudness of each FRAME-long slice."""
+    f = int(rate * FRAME)
+    return np.sqrt(np.mean(audio[: len(audio) // f * f].reshape(-1, f) ** 2, axis=1))
 
 
 def pieces(audio: np.ndarray, rate: int, min_gap: float = MIN_GAP) -> list[tuple[int, int]]:
     """Start and end sample of each spoken piece, split on silences of at least min_gap seconds."""
     f = int(rate * FRAME)
-    rms = np.sqrt(np.mean(audio[: len(audio) // f * f].reshape(-1, f) ** 2, axis=1))
+    rms = loudness(audio, rate)
     loud = rms > max(0.005, rms.max() * 0.04)
     found, start, quiet = [], None, 0
     for i, on in enumerate(loud):
@@ -45,6 +54,31 @@ def pieces(audio: np.ndarray, rate: int, min_gap: float = MIN_GAP) -> list[tuple
         found.append((start, len(loud)))
     # Ignore clicks and breaths too short to be a word.
     return [(s * f, e * f) for s, e in found if (e - s) * FRAME >= 0.12]
+
+
+def widen(audio: np.ndarray, rate: int, found: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    """Grows each piece outwards over soft sounds at its edges.
+
+    Splitting only looks for the loud part of each word, which would cut off quiet sounds
+    like the "f" in "four" or the tail of "five". An edge never moves past halfway to the
+    next piece.
+    """
+    f = int(rate * FRAME)
+    rms = loudness(audio, rate)
+    soft = rms > rms.max() * SOFT
+    bridge, most = round(BRIDGE / FRAME), round(MAX_GROW / FRAME)
+    frames = [(s // f, e // f) for s, e in found]
+    out = []
+    for i, (s, e) in enumerate(frames):
+        lo = max(s - most, (frames[i - 1][1] + s) // 2 if i else 0)
+        hi = min(e + most, (e + frames[i + 1][0]) // 2 if i + 1 < len(frames) else len(rms))
+        while s > lo and soft[max(lo, s - bridge) : s].any():
+            s = max(lo, s - bridge) + int(np.argmax(soft[max(lo, s - bridge) : s]))
+        while e < hi and soft[e : min(hi, e + bridge)].any():
+            window = soft[e : min(hi, e + bridge)]
+            e = e + len(window) - int(np.argmax(window[::-1]))
+        out.append((s * f, e * f))
+    return out
 
 
 def clip(audio: np.ndarray, rate: int, start: int, end: int) -> np.ndarray:
@@ -74,7 +108,7 @@ def split(batch: dict, wav: Path, out: Path) -> bool:
         print("  Re-record this batch (or listen for a skipped or doubled line).")
         return False
     out.mkdir(parents=True, exist_ok=True)
-    for (s, e), item in zip(found, batch["items"]):
+    for (s, e), item in zip(widen(audio, rate, found), batch["items"]):
         sf.write(out / f"{item['file']}.mp3", clip(audio, rate, s, e), rate, format="MP3", subtype="MPEG_LAYER_III")
     print(f"  {batch['id']}: wrote {want} clips")
     return True

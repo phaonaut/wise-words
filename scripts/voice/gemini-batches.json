@@ -1293,5 +1293,494 @@
     "text": "The wind is cold."
    }
   ]
+ },
+ {
+  "id": "math-phrases",
+  "title": "Math phrases",
+  "style": "A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.",
+  "items": [
+   {
+    "file": "p-math",
+    "text": "Math!"
+   },
+   {
+    "file": "p-count-it",
+    "text": "Count it!"
+   },
+   {
+    "file": "p-add-and-subtract",
+    "text": "Add and subtract!"
+   },
+   {
+    "file": "p-more-or-less",
+    "text": "More or less!"
+   },
+   {
+    "file": "p-how-many",
+    "text": "How many?"
+   },
+   {
+    "file": "p-what-is",
+    "text": "What is"
+   },
+   {
+    "file": "p-plus",
+    "text": "plus"
+   },
+   {
+    "file": "p-take-away",
+    "text": "take away"
+   },
+   {
+    "file": "p-minus",
+    "text": "minus"
+   },
+   {
+    "file": "p-is",
+    "text": "is"
+   },
+   {
+    "file": "p-which-has-more",
+    "text": "Which has more?"
+   },
+   {
+    "file": "p-which-has-fewer",
+    "text": "Which has fewer?"
+   },
+   {
+    "file": "p-which-number-is-bigger",
+    "text": "Which number is bigger?"
+   },
+   {
+    "file": "p-which-number-is-smaller",
+    "text": "Which number is smaller?"
+   },
+   {
+    "file": "p-which-number-is-the-biggest",
+    "text": "Which number is the biggest?"
+   },
+   {
+    "file": "p-which-number-is-the-smallest",
+    "text": "Which number is the smallest?"
+   }
+  ]
+ },
+ {
+  "id": "numbers-1",
+  "title": "Numbers 0 to 50",
+  "style": "A warm, patient kindergarten teacher counting out loud for a five-year-old. Say each number once, slowly and clearly, in standard American English. Leave a long pause after every number. Do not say anything else.",
+  "items": [
+   {
+    "file": "n-0",
+    "text": "zero."
+   },
+   {
+    "file": "n-1",
+    "text": "one."
+   },
+   {
+    "file": "n-2",
+    "text": "two."
+   },
+   {
+    "file": "n-3",
+    "text": "three."
+   },
+   {
+    "file": "n-4",
+    "text": "four."
+   },
+   {
+    "file": "n-5",
+    "text": "five."
+   },
+   {
+    "file": "n-6",
+    "text": "six."
+   },
+   {
+    "file": "n-7",
+    "text": "seven."
+   },
+   {
+    "file": "n-8",
+    "text": "eight."
+   },
+   {
+    "file": "n-9",
+    "text": "nine."
+   },
+   {
+    "file": "n-10",
+    "text": "ten."
+   },
+   {
+    "file": "n-11",
+    "text": "eleven."
+   },
+   {
+    "file": "n-12",
+    "text": "twelve."
+   },
+   {
+    "file": "n-13",
+    "text": "thirteen."
+   },
+   {
+    "file": "n-14",
+    "text": "fourteen."
+   },
+   {
+    "file": "n-15",
+    "text": "fifteen."
+   },
+   {
+    "file": "n-16",
+    "text": "sixteen."
+   },
+   {
+    "file": "n-17",
+    "text": "seventeen."
+   },
+   {
+    "file": "n-18",
+    "text": "eighteen."
+   },
+   {
+    "file": "n-19",
+    "text": "nineteen."
+   },
+   {
+    "file": "n-20",
+    "text": "twenty."
+   },
+   {
+    "file": "n-21",
+    "text": "twenty-one."
+   },
+   {
+    "file": "n-22",
+    "text": "twenty-two."
+   },
+   {
+    "file": "n-23",
+    "text": "twenty-three."
+   },
+   {
+    "file": "n-24",
+    "text": "twenty-four."
+   },
+   {
+    "file": "n-25",
+    "text": "twenty-five."
+   },
+   {
+    "file": "n-26",
+    "text": "twenty-six."
+   },
+   {
+    "file": "n-27",
+    "text": "twenty-seven."
+   },
+   {
+    "file": "n-28",
+    "text": "twenty-eight."
+   },
+   {
+    "file": "n-29",
+    "text": "twenty-nine."
+   },
+   {
+    "file": "n-30",
+    "text": "thirty."
+   },
+   {
+    "file": "n-31",
+    "text": "thirty-one."
+   },
+   {
+    "file": "n-32",
+    "text": "thirty-two."
+   },
+   {
+    "file": "n-33",
+    "text": "thirty-three."
+   },
+   {
+    "file": "n-34",
+    "text": "thirty-four."
+   },
+   {
+    "file": "n-35",
+    "text": "thirty-five."
+   },
+   {
+    "file": "n-36",
+    "text": "thirty-six."
+   },
+   {
+    "file": "n-37",
+    "text": "thirty-seven."
+   },
+   {
+    "file": "n-38",
+    "text": "thirty-eight."
+   },
+   {
+    "file": "n-39",
+    "text": "thirty-nine."
+   },
+   {
+    "file": "n-40",
+    "text": "forty."
+   },
+   {
+    "file": "n-41",
+    "text": "forty-one."
+   },
+   {
+    "file": "n-42",
+    "text": "forty-two."
+   },
+   {
+    "file": "n-43",
+    "text": "forty-three."
+   },
+   {
+    "file": "n-44",
+    "text": "forty-four."
+   },
+   {
+    "file": "n-45",
+    "text": "forty-five."
+   },
+   {
+    "file": "n-46",
+    "text": "forty-six."
+   },
+   {
+    "file": "n-47",
+    "text": "forty-seven."
+   },
+   {
+    "file": "n-48",
+    "text": "forty-eight."
+   },
+   {
+    "file": "n-49",
+    "text": "forty-nine."
+   },
+   {
+    "file": "n-50",
+    "text": "fifty."
+   }
+  ]
+ },
+ {
+  "id": "numbers-2",
+  "title": "Numbers 51 to 100",
+  "style": "A warm, patient kindergarten teacher counting out loud for a five-year-old. Say each number once, slowly and clearly, in standard American English. Leave a long pause after every number. Do not say anything else.",
+  "items": [
+   {
+    "file": "n-51",
+    "text": "fifty-one."
+   },
+   {
+    "file": "n-52",
+    "text": "fifty-two."
+   },
+   {
+    "file": "n-53",
+    "text": "fifty-three."
+   },
+   {
+    "file": "n-54",
+    "text": "fifty-four."
+   },
+   {
+    "file": "n-55",
+    "text": "fifty-five."
+   },
+   {
+    "file": "n-56",
+    "text": "fifty-six."
+   },
+   {
+    "file": "n-57",
+    "text": "fifty-seven."
+   },
+   {
+    "file": "n-58",
+    "text": "fifty-eight."
+   },
+   {
+    "file": "n-59",
+    "text": "fifty-nine."
+   },
+   {
+    "file": "n-60",
+    "text": "sixty."
+   },
+   {
+    "file": "n-61",
+    "text": "sixty-one."
+   },
+   {
+    "file": "n-62",
+    "text": "sixty-two."
+   },
+   {
+    "file": "n-63",
+    "text": "sixty-three."
+   },
+   {
+    "file": "n-64",
+    "text": "sixty-four."
+   },
+   {
+    "file": "n-65",
+    "text": "sixty-five."
+   },
+   {
+    "file": "n-66",
+    "text": "sixty-six."
+   },
+   {
+    "file": "n-67",
+    "text": "sixty-seven."
+   },
+   {
+    "file": "n-68",
+    "text": "sixty-eight."
+   },
+   {
+    "file": "n-69",
+    "text": "sixty-nine."
+   },
+   {
+    "file": "n-70",
+    "text": "seventy."
+   },
+   {
+    "file": "n-71",
+    "text": "seventy-one."
+   },
+   {
+    "file": "n-72",
+    "text": "seventy-two."
+   },
+   {
+    "file": "n-73",
+    "text": "seventy-three."
+   },
+   {
+    "file": "n-74",
+    "text": "seventy-four."
+   },
+   {
+    "file": "n-75",
+    "text": "seventy-five."
+   },
+   {
+    "file": "n-76",
+    "text": "seventy-six."
+   },
+   {
+    "file": "n-77",
+    "text": "seventy-seven."
+   },
+   {
+    "file": "n-78",
+    "text": "seventy-eight."
+   },
+   {
+    "file": "n-79",
+    "text": "seventy-nine."
+   },
+   {
+    "file": "n-80",
+    "text": "eighty."
+   },
+   {
+    "file": "n-81",
+    "text": "eighty-one."
+   },
+   {
+    "file": "n-82",
+    "text": "eighty-two."
+   },
+   {
+    "file": "n-83",
+    "text": "eighty-three."
+   },
+   {
+    "file": "n-84",
+    "text": "eighty-four."
+   },
+   {
+    "file": "n-85",
+    "text": "eighty-five."
+   },
+   {
+    "file": "n-86",
+    "text": "eighty-six."
+   },
+   {
+    "file": "n-87",
+    "text": "eighty-seven."
+   },
+   {
+    "file": "n-88",
+    "text": "eighty-eight."
+   },
+   {
+    "file": "n-89",
+    "text": "eighty-nine."
+   },
+   {
+    "file": "n-90",
+    "text": "ninety."
+   },
+   {
+    "file": "n-91",
+    "text": "ninety-one."
+   },
+   {
+    "file": "n-92",
+    "text": "ninety-two."
+   },
+   {
+    "file": "n-93",
+    "text": "ninety-three."
+   },
+   {
+    "file": "n-94",
+    "text": "ninety-four."
+   },
+   {
+    "file": "n-95",
+    "text": "ninety-five."
+   },
+   {
+    "file": "n-96",
+    "text": "ninety-six."
+   },
+   {
+    "file": "n-97",
+    "text": "ninety-seven."
+   },
+   {
+    "file": "n-98",
+    "text": "ninety-eight."
+   },
+   {
+    "file": "n-99",
+    "text": "ninety-nine."
+   },
+   {
+    "file": "n-100",
+    "text": "one hundred."
+   }
+  ]
  }
 ]

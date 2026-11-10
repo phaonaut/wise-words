@@ -432,3 +432,159 @@ I wish I could fly. <long pause>
 Please close the door. <long pause>
 The wind is cold. <long pause>
 ```
+
+## math-phrases.wav: Math phrases (16)
+
+Style:
+
+```
+A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.
+```
+
+Text:
+
+```
+Math! <long pause>
+Count it! <long pause>
+Add and subtract! <long pause>
+More or less! <long pause>
+How many? <long pause>
+What is <long pause>
+plus <long pause>
+take away <long pause>
+minus <long pause>
+is <long pause>
+Which has more? <long pause>
+Which has fewer? <long pause>
+Which number is bigger? <long pause>
+Which number is smaller? <long pause>
+Which number is the biggest? <long pause>
+Which number is the smallest? <long pause>
+```
+
+## numbers-1.wav: Numbers 0 to 50 (51)
+
+Style:
+
+```
+A warm, patient kindergarten teacher counting out loud for a five-year-old. Say each number once, slowly and clearly, in standard American English. Leave a long pause after every number. Do not say anything else.
+```
+
+Text:
+
+```
+zero. <long pause>
+one. <long pause>
+two. <long pause>
+three. <long pause>
+four. <long pause>
+five. <long pause>
+six. <long pause>
+seven. <long pause>
+eight. <long pause>
+nine. <long pause>
+ten. <long pause>
+eleven. <long pause>
+twelve. <long pause>
+thirteen. <long pause>
+fourteen. <long pause>
+fifteen. <long pause>
+sixteen. <long pause>
+seventeen. <long pause>
+eighteen. <long pause>
+nineteen. <long pause>
+twenty. <long pause>
+twenty-one. <long pause>
+twenty-two. <long pause>
+twenty-three. <long pause>
+twenty-four. <long pause>
+twenty-five. <long pause>
+twenty-six. <long pause>
+twenty-seven. <long pause>
+twenty-eight. <long pause>
+twenty-nine. <long pause>
+thirty. <long pause>
+thirty-one. <long pause>
+thirty-two. <long pause>
+thirty-three. <long pause>
+thirty-four. <long pause>
+thirty-five. <long pause>
+thirty-six. <long pause>
+thirty-seven. <long pause>
+thirty-eight. <long pause>
+thirty-nine. <long pause>
+forty. <long pause>
+forty-one. <long pause>
+forty-two. <long pause>
+forty-three. <long pause>
+forty-four. <long pause>
+forty-five. <long pause>
+forty-six. <long pause>
+forty-seven. <long pause>
+forty-eight. <long pause>
+forty-nine. <long pause>
+fifty. <long pause>
+```
+
+## numbers-2.wav: Numbers 51 to 100 (50)
+
+Style:
+
+```
+A warm, patient kindergarten teacher counting out loud for a five-year-old. Say each number once, slowly and clearly, in standard American English. Leave a long pause after every number. Do not say anything else.
+```
+
+Text:
+
+```
+fifty-one. <long pause>
+fifty-two. <long pause>
+fifty-three. <long pause>
+fifty-four. <long pause>
+fifty-five. <long pause>
+fifty-six. <long pause>
+fifty-seven. <long pause>
+fifty-eight. <long pause>
+fifty-nine. <long pause>
+sixty. <long pause>
+sixty-one. <long pause>
+sixty-two. <long pause>
+sixty-three. <long pause>
+sixty-four. <long pause>
+sixty-five. <long pause>
+sixty-six. <long pause>
+sixty-seven. <long pause>
+sixty-eight. <long pause>
+sixty-nine. <long pause>
+seventy. <long pause>
+seventy-one. <long pause>
+seventy-two. <long pause>
+seventy-three. <long pause>
+seventy-four. <long pause>
+seventy-five. <long pause>
+seventy-six. <long pause>
+seventy-seven. <long pause>
+seventy-eight. <long pause>
+seventy-nine. <long pause>
+eighty. <long pause>
+eighty-one. <long pause>
+eighty-two. <long pause>
+eighty-three. <long pause>
+eighty-four. <long pause>
+eighty-five. <long pause>
+eighty-six. <long pause>
+eighty-seven. <long pause>
+eighty-eight. <long pause>
+eighty-nine. <long pause>
+ninety. <long pause>
+ninety-one. <long pause>
+ninety-two. <long pause>
+ninety-three. <long pause>
+ninety-four. <long pause>
+ninety-five. <long pause>
+ninety-six. <long pause>
+ninety-seven. <long pause>
+ninety-eight. <long pause>
+ninety-nine. <long pause>
+one hundred. <long pause>
+```

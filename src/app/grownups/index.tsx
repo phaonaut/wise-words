@@ -109,6 +109,10 @@ export default function GrownupsHome() {
         <Txt size={16}>🃏 Flashcards: your child reads the word out loud, and you tap ✅ or 🔁.</Txt>
         <Txt size={16}>👂 Hear & Find: the app says a word and your child taps it. Good for playing alone.</Txt>
         <Txt size={16}>✏️ Spell It: the app says a word and your child spells it with letter tiles.</Txt>
+        <Txt size={16}>
+          🔢 Math: counting, adding and subtracting, and comparing numbers. Pick each child&apos;s level on
+          their page.
+        </Txt>
         <Txt size={16} color={colors.muted}>
           A word counts as learned after it&apos;s answered right on the first try on 3 different days.
           Missed words come back sooner, and learned words come back now and then for review.

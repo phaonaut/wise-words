@@ -7,6 +7,7 @@ export const colors = {
   flashcards: '#E8562A',
   find: '#1E88E5',
   spell: '#3E9B47',
+  math: '#7E57C2',
   good: '#2E9D4F',
   goodSoft: '#D7F2DD',
   bad: '#D93B3B',

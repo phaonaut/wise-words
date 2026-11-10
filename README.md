@@ -11,6 +11,10 @@ A sight word and spelling practice app for young kids (about ages 4–8), built 
   - 🃏 **Flashcards**: the child reads the word out loud, and a grown-up taps ✅ or 🔁.
   - 👂 **Hear & Find**: the app says a word, and the child taps it from 3 or 4 look-alike choices.
   - ✏️ **Spell It**: the app says the word (and a sentence for sound-alike words), and the child spells it with letter tiles or the keyboard.
+- **Math (prototype)**, with four levels from about Pre-K to 2nd grade, picked for each child by a grown-up:
+  - 🐞 **Count It**: count things in ten-frames, or tens and ones blocks at the higher levels.
+  - ➕ **Add & Subtract**: with pictures to count for small numbers.
+  - ⚖️ **More or Less**: pick the bigger or smaller group or number.
 - **Adapts to each child**: a word counts as learned after it's answered right on the first try on 3 different days.
   Misses come back sooner. Reading and spelling are tracked separately.
 - **Stars and a sticker book**, with no timers or penalties.
@@ -81,6 +85,7 @@ that batch.
 
 - `src/app/`: screens (Expo Router). Kid games live in `kid/[kidId]/`, and the grown-ups area in `grownups/`.
 - `src/data/dolch.ts`: the built-in word lists and the read-aloud sentences.
+- `src/lib/math.ts`: the math levels and how problems are made. The math screens are in `kid/[kidId]/math/`.
 - `src/lib/srs.ts`: how words move from new → learning → learned, and how each round's words are picked.
 - `src/lib/store.tsx`: saved data (kids, lists, progress, stickers).
 - `src/lib/words.ts`: word list parsing, sound-alike words, and look-alike wrong choices.

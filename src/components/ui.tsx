@@ -29,6 +29,8 @@ export function Txt({ bold, size = 18, color = colors.ink, center, style, ...res
           lineHeight: Math.round(size * 1.3),
           color,
           textAlign: center ? 'center' : undefined,
+          // Labels aren't for selecting: on the web a tap would leave a text cursor or a highlight.
+          userSelect: 'none',
         },
         style,
       ]}

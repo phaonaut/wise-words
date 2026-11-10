@@ -1,11 +1,10 @@
 import { router, useLocalSearchParams, type Href } from 'expo-router';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import { MissingKid } from '@/components/game';
+import { GameTile, MissingKid } from '@/components/game';
 import { BigButton, goBack, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { MASTERED } from '@/lib/srs';
-import { buzz, say } from '@/lib/speech';
 import { progressFor, rewardsFor, useKid, useStore } from '@/lib/store';
 import type { WordEntry, WordProgress } from '@/lib/types';
 import { wordKey, wordPool } from '@/lib/words';
@@ -14,6 +13,7 @@ const GAMES = [
   { route: 'flashcards', name: 'Flashcards', spoken: 'Flashcards', emoji: '🃏', color: colors.flashcards, hint: 'Read the word to a grown-up' },
   { route: 'find', name: 'Hear & Find', spoken: 'Hear and Find', emoji: '👂', color: colors.find, hint: 'Listen, then tap the word' },
   { route: 'spell', name: 'Spell It', spoken: 'Spell It', emoji: '✏️', color: colors.spell, hint: 'Listen, then spell the word' },
+  { route: 'math', name: 'Math', spoken: 'Math', emoji: '🔢', color: colors.math, hint: 'Count, add and compare' },
 ] as const;
 
 export default function KidHome() {
@@ -43,29 +43,7 @@ export default function KidHome() {
 
       <View style={styles.games}>
         {GAMES.map((g) => (
-          <Pressable
-            key={g.route}
-            accessibilityRole="button"
-            accessibilityLabel={g.name}
-            onPress={() => {
-              buzz('tap');
-              say(g.spoken);
-              router.push(`/kid/${kid.id}/${g.route}` as Href);
-            }}
-            style={({ pressed }) => [
-              styles.game,
-              { backgroundColor: g.color, transform: [{ scale: pressed ? 0.96 : 1 }] },
-            ]}>
-            <Txt size={70} style={{ lineHeight: 90 }}>
-              {g.emoji}
-            </Txt>
-            <Txt bold size={28} color="#fff" center>
-              {g.name}
-            </Txt>
-            <Txt size={16} color="#fff" center>
-              {g.hint}
-            </Txt>
-          </Pressable>
+          <GameTile key={g.route} {...g} onPress={() => router.push(`/kid/${kid.id}/${g.route}` as Href)} />
         ))}
       </View>
 
@@ -132,18 +110,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   games: { flexDirection: 'row', flexWrap: 'wrap', gap: 16, justifyContent: 'center' },
-  game: {
-    width: 260,
-    minHeight: 220,
-    borderRadius: 32,
-    padding: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 4,
-    shadowColor: '#000',
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 4,
-  },
 });

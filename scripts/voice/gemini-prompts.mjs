@@ -14,6 +14,8 @@ const STYLE = {
     'A warm, patient kindergarten teacher reading sight word flashcards to a five-year-old. Say each word once, slowly and clearly, in standard American English. Leave a long pause after every word. Do not say anything else.',
   letters:
     'A warm, patient kindergarten teacher saying the names of the letters of the alphabet to a five-year-old. Say each letter name once, slowly and clearly. Leave a long pause after every letter. Do not say anything else.',
+  numbers:
+    'A warm, patient kindergarten teacher counting out loud for a five-year-old. Say each number once, slowly and clearly, in standard American English. Leave a long pause after every number. Do not say anything else.',
   lines:
     'A warm, cheerful kindergarten teacher talking to a five-year-old. Say each line once, clearly, at a relaxed pace, in standard American English. Leave a long pause after every line. Do not say anything else.',
 };
@@ -48,7 +50,7 @@ batches.push({
   title: 'Phrases',
   style: STYLE.lines,
   items: of('p:')
-    .filter((c) => c.file.startsWith('p-'))
+    .filter((c) => c.file.startsWith('p-') && !c.batch)
     .map((c) => ({ file: c.file, text: c.text })),
 });
 
@@ -62,6 +64,17 @@ const half = Math.ceil(sentences.length / 2);
     items: part.map((c) => ({ file: c.file, text: c.text })),
   }),
 );
+
+// Clips that name their own batch (math phrases and numbers).
+const EXTRA = {
+  'math-phrases': { title: 'Math phrases', style: STYLE.lines },
+  'numbers-1': { title: 'Numbers 0 to 50', style: STYLE.numbers },
+  'numbers-2': { title: 'Numbers 51 to 100', style: STYLE.numbers },
+};
+for (const [id, extra] of Object.entries(EXTRA)) {
+  const items = manifest.filter((c) => c.batch === id).map((c) => ({ file: c.file, text: c.text }));
+  if (items.length) batches.push({ id, ...extra, items });
+}
 
 writeFileSync(new URL('./gemini-batches.json', import.meta.url), JSON.stringify(batches, null, 1));
 

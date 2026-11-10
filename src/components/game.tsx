@@ -1,12 +1,12 @@
 import { router } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Platform, StyleSheet, View } from 'react-native';
+import { Animated, Platform, Pressable, StyleSheet, View } from 'react-native';
 
 import { Owl } from '@/components/owl';
 import { BigButton, Card, goBack, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { pickRound } from '@/lib/srs';
-import { say, stopSpeaking } from '@/lib/speech';
+import { buzz, say, stopSpeaking } from '@/lib/speech';
 import {
   chooseSticker,
   giveSticker,
@@ -68,6 +68,48 @@ export function useRound(kid: Kid | undefined, skill: Skill) {
       setSticker(null);
     },
   };
+}
+
+/** A big colorful button for picking a game. Says the game's name when tapped. */
+export function GameTile({
+  name,
+  spoken = name,
+  emoji,
+  hint,
+  color,
+  onPress,
+}: {
+  name: string;
+  spoken?: string;
+  emoji: string;
+  hint: string;
+  color: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={name}
+      onPress={() => {
+        buzz('tap');
+        say(spoken);
+        onPress();
+      }}
+      style={({ pressed }) => [
+        styles.tile,
+        { backgroundColor: color, transform: [{ scale: pressed ? 0.96 : 1 }] },
+      ]}>
+      <Txt size={70} style={{ lineHeight: 90 }}>
+        {emoji}
+      </Txt>
+      <Txt bold size={28} color="#fff" center>
+        {name}
+      </Txt>
+      <Txt size={16} color="#fff" center>
+        {hint}
+      </Txt>
+    </Pressable>
+  );
 }
 
 export function RoundProgress({ index, total, color }: { index: number; total: number; color: string }) {
@@ -172,6 +214,20 @@ export function MissingKid() {
 }
 
 const styles = StyleSheet.create({
+  tile: {
+    width: 260,
+    minHeight: 220,
+    borderRadius: 32,
+    padding: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 4,
+  },
   dots: { flexDirection: 'row', gap: 6, justifyContent: 'center', flexWrap: 'wrap' },
   dot: { width: 14, height: 14, borderRadius: 7 },
   doneWrap: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 18 },
