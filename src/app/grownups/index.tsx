@@ -5,11 +5,11 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { BigButton, Card, Choice, Screen, SectionTitle, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { BUILT_IN_LISTS } from '@/data/dolch';
-import { statusOf } from '@/lib/srs';
+import { countWords } from '@/lib/srs';
 import { asWord, say, setRate as setSpeechSpeed } from '@/lib/speech';
 import { progressFor, setSpeechRate, useStore } from '@/lib/store';
 import type { WordList } from '@/lib/types';
-import { allLists, wordKey, wordPool } from '@/lib/words';
+import { allLists, wordPool } from '@/lib/words';
 
 export default function GrownupsHome() {
   const { data, update } = useStore();
@@ -22,8 +22,8 @@ export default function GrownupsHome() {
         {data.kids.map((kid) => {
           const pool = wordPool(data, kid);
           const p = progressFor(data, kid.id);
-          const read = pool.filter((w) => statusOf(p.read[wordKey(w.word)]) === 'mastered').length;
-          const spell = pool.filter((w) => statusOf(p.spell[wordKey(w.word)]) === 'mastered').length;
+          const read = countWords(pool, p.read);
+          const spell = countWords(pool, p.spell);
           const listNames = kid.listIds
             .map((id) => lists.find((l) => l.id === id)?.name)
             .filter(Boolean)
@@ -41,7 +41,10 @@ export default function GrownupsHome() {
                   {listNames || 'No word lists yet'}
                 </Txt>
                 <Txt size={14} color={colors.muted}>
-                  Reads {read} of {pool.length} · Spells {spell} of {pool.length}
+                  Reading: {read.learned} of {read.total} learned, {read.practicing} practicing
+                </Txt>
+                <Txt size={14} color={colors.muted}>
+                  Spelling: {spell.learned} of {spell.total} learned, {spell.practicing} practicing
                 </Txt>
               </View>
               <Txt color={colors.grownups} bold>

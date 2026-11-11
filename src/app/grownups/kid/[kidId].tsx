@@ -16,7 +16,7 @@ import {
 import { colors, fonts } from '@/constants/theme';
 import { AVATARS, KID_COLORS, pickOne } from '@/data/fun';
 import { MATH_LEVELS } from '@/lib/math';
-import { statusOf, type WordStatus } from '@/lib/srs';
+import { countWords, statusOf, type WordStatus } from '@/lib/srs';
 import {
   deleteKid,
   mathTally,
@@ -246,6 +246,10 @@ function ProgressView({ kid }: { kid: Kid }) {
           </View>
         ))}
       </View>
+      <Txt size={14} color={colors.muted} style={{ marginTop: 6 }}>
+        A word turns &quot;Learned&quot; once it&apos;s answered right on the first try on 3 different days, so
+        the first ones take about 4 days. A miss sends the word back to the start.
+      </Txt>
 
       {tricky.length > 0 && (
         <Card style={{ marginTop: 12, gap: 6 }}>
@@ -257,11 +261,11 @@ function ProgressView({ kid }: { kid: Kid }) {
       )}
 
       {lists.map((l) => {
-        const learned = l.words.filter((w) => statusOf(progress[wordKey(w.word)]) === 'mastered').length;
+        const counts = countWords(l.words, progress);
         return (
           <Card key={l.id} style={{ marginTop: 12, gap: 8 }}>
             <Txt bold>
-              {l.name}: {learned} of {l.words.length} learned
+              {l.name}: {counts.learned} of {counts.total} learned, {counts.practicing} practicing
             </Txt>
             <View style={styles.wrapRow}>
               {l.words.map((w) => (

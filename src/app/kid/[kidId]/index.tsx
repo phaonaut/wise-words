@@ -4,10 +4,9 @@ import { StyleSheet, View } from 'react-native';
 import { GameTile, MissingKid } from '@/components/game';
 import { BigButton, goBack, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
-import { MASTERED } from '@/lib/srs';
+import { countWords, type WordCounts } from '@/lib/srs';
 import { progressFor, rewardsFor, useKid, useStore } from '@/lib/store';
-import type { WordEntry, WordProgress } from '@/lib/types';
-import { wordKey, wordPool } from '@/lib/words';
+import { wordPool } from '@/lib/words';
 
 const GAMES = [
   { route: 'flashcards', name: 'Flashcards', spoken: 'Flashcards', emoji: '🃏', color: colors.flashcards, hint: 'Read the word to a grown-up' },
@@ -25,6 +24,10 @@ export default function KidHome() {
   const pool = wordPool(data, kid);
   const progress = progressFor(data, kid.id);
   const rewards = rewardsFor(data, kid.id);
+  const read = countWords(pool, progress.read);
+  const spell = countWords(pool, progress.spell);
+  // Until the first words are learned, say why the learned count is still zero.
+  const justStarting = read.learned + spell.learned === 0 && read.practicing + spell.practicing > 0;
 
   return (
     <Screen
@@ -37,8 +40,13 @@ export default function KidHome() {
         </Txt>
       }>
       <View style={styles.meters}>
-        <Meter label="Words I can read" stats={meterStats(pool, progress.read)} color={colors.flashcards} />
-        <Meter label="Words I can spell" stats={meterStats(pool, progress.spell)} color={colors.spell} />
+        <Meter label="Words I can read" stats={read} color={colors.flashcards} />
+        <Meter label="Words I can spell" stats={spell} color={colors.spell} />
+        {justStarting && (
+          <Txt size={14} color={colors.muted}>
+            A word is learned once it&apos;s right on 3 different days, so the first ones take about 4 days.
+          </Txt>
+        )}
       </View>
 
       <View style={styles.games}>
@@ -59,37 +67,17 @@ export default function KidHome() {
   );
 }
 
-type MeterStats = { total: number; learned: number; onTheWay: number; partial: number };
-
-// A word is learned after 3 good days, so the bar also fills a little for each step
-// along the way. Otherwise a first round would never move it.
-function meterStats(pool: WordEntry[], progress: Record<string, WordProgress>): MeterStats {
-  let learned = 0;
-  let onTheWay = 0;
-  let partial = 0;
-  for (const w of pool) {
-    const p = progress[wordKey(w.word)];
-    if (!p) continue;
-    if (p.box >= MASTERED) learned++;
-    else if (p.box > 0) {
-      onTheWay++;
-      partial += p.box / MASTERED;
-    }
-  }
-  return { total: pool.length, learned, onTheWay, partial };
-}
-
-function Meter({ label, stats, color }: { label: string; stats: MeterStats; color: string }) {
+// The bar fills solid for learned words and lightly for each good day on the words
+// still being practiced. Otherwise it wouldn't move for the first few days.
+function Meter({ label, stats, color }: { label: string; stats: WordCounts; color: string }) {
   const pct = (n: number) => (stats.total ? (n / stats.total) * 100 : 0);
   return (
     <View style={styles.meter}>
       <Txt bold size={18}>
-        {label}: {stats.learned} of {stats.total}
-        {stats.onTheWay > 0 && (
-          <Txt size={16} color={colors.muted}>
-            {'  '}⭐ {stats.onTheWay} on the way
-          </Txt>
-        )}
+        {label}
+      </Txt>
+      <Txt size={16} color={colors.muted}>
+        ⭐ {stats.learned} of {stats.total} learned{'   '}🌱 {stats.practicing} practicing
       </Txt>
       <View style={styles.track}>
         <View style={{ width: `${pct(stats.learned)}%`, backgroundColor: color }} />

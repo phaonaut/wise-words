@@ -52,6 +52,33 @@ export function statusOf(p: WordProgress | undefined): WordStatus {
   return p.box >= MASTERED ? 'mastered' : 'learning';
 }
 
+export type WordCounts = {
+  total: number;
+  learned: number;
+  /** Tried at least once but not learned yet. */
+  practicing: number;
+  /** The practicing words' progress added up, where each good day is a third of a word. For progress bars. */
+  partial: number;
+};
+
+/**
+ * Counts for showing progress. A word takes at least 4 days to count as learned, so anything
+ * that shows `learned` should show `practicing` next to it, or early progress looks like zero.
+ */
+export function countWords(words: WordEntry[], progress: Record<string, WordProgress>): WordCounts {
+  const counts: WordCounts = { total: words.length, learned: 0, practicing: 0, partial: 0 };
+  for (const w of words) {
+    const p = progress[wordKey(w.word)];
+    if (!p) continue;
+    if (p.box >= MASTERED) counts.learned++;
+    else {
+      counts.practicing++;
+      counts.partial += p.box / MASTERED;
+    }
+  }
+  return counts;
+}
+
 /**
  * Picks the words for one round: words being learned that are due, then a few new
  * words (in list order), then a couple of mastered words for review.
