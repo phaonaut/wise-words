@@ -9,6 +9,7 @@ import { countWords } from '@/lib/srs';
 import { asWord, say, setRate as setSpeechSpeed } from '@/lib/speech';
 import { progressFor, setSpeechRate, useStore } from '@/lib/store';
 import type { WordList } from '@/lib/types';
+import { versionLabel } from '@/lib/version';
 import { allLists, wordPool } from '@/lib/words';
 
 export default function GrownupsHome() {
@@ -121,6 +122,10 @@ export default function GrownupsHome() {
           Missed words come back sooner, and learned words come back now and then for review.
         </Txt>
       </Card>
+
+      <Txt size={13} color={colors.muted} center style={{ marginTop: 24 }}>
+        {versionLabel}
+      </Txt>
     </Screen>
   );
 }

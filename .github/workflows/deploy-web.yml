@@ -21,11 +21,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          # Full history, so the version number below can count the commits.
+          fetch-depth: 0
       - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
       - run: npm ci
+      # The version shown in the app (src/lib/version.ts): one higher with every commit.
+      - name: Stamp the version
+        run: |
+          echo "EXPO_PUBLIC_BUILD_NUMBER=$(git rev-list --count HEAD)" >> "$GITHUB_ENV"
+          echo "EXPO_PUBLIC_BUILD_TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
       - run: npx expo export --platform web
       # GitHub Pages has no rewrites, so serve the app for every path (e.g. /wise-words/kid/123).
       - run: cp dist/index.html dist/404.html

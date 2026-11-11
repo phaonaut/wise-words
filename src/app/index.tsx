@@ -6,6 +6,7 @@ import { BigButton, Card, Screen, Txt } from '@/components/ui';
 import { colors } from '@/constants/theme';
 import { buzz, say } from '@/lib/speech';
 import { useStore } from '@/lib/store';
+import { versionLabel } from '@/lib/version';
 
 export default function WhoIsPlaying() {
   const { data } = useStore();
@@ -73,6 +74,9 @@ export default function WhoIsPlaying() {
           ))}
         </View>
       )}
+      <Txt size={13} color={colors.muted} center style={{ marginTop: 36 }}>
+        {versionLabel}
+      </Txt>
     </Screen>
   );
 }
